@@ -1,0 +1,45 @@
+{
+  "name": "validator.tool",
+  "version": "2.0.0-alpha.0",
+  "description": "轻量级的JavaScript表单验证，字符串验证。没有依赖，支持UMD，~3kb。",
+  "homepage": "http://jaywcjlove.github.io/validator.js",
+  "author": "kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "dist/validator.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaywcjlove/validator.js"
+  },
+  "keywords": [
+    "validator",
+    "validator.tool",
+    "validator.js",
+    "validation",
+    "validate",
+    "sanitization",
+    "sanitize",
+    "sanitisation",
+    "sanitise",
+    "assert"
+  ],
+  "files": [
+    "cjs",
+    "esm",
+    "dist"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-node-resolve": "13.0.6",
+    "@rollup/plugin-typescript": "8.3.0",
+    "bannerjs": "2.0.1",
+    "rollup": "2.58.0",
+    "rollup-plugin-terser": "7.0.2"
+  }
+}
