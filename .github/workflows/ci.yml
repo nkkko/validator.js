@@ -33,6 +33,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: website/build
 
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./packages/core/package.json
+          tag: next
+
   release:
     runs-on: ubuntu-20.04
     needs: build-deploy

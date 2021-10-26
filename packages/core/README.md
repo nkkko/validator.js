@@ -11,7 +11,7 @@ Lightweight JavaScript form validation, that had minimal configuration and felt 
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
-[Install](#install) · [Usage](#usage) · [API](#api) · [options](#options) · [npm](http://npm.im/svgtofont) · [License](#license)
+[Install](#install) · [Usage](#usage) · [API](#api) · [options](#options) · [npm](http://npm.im/validator.tool) · [License](#license)
 
 ## Install
 
