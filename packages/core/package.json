@@ -1,6 +1,6 @@
 {
   "name": "validator.tool",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "轻量级的JavaScript表单验证，字符串验证。没有依赖，支持UMD，~3kb。",
   "homepage": "http://jaywcjlove.github.io/validator.js",
   "author": "kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)",
