@@ -98,11 +98,13 @@
                 return _this.values;
             };
             this.reset = function () {
-                if (!_this.form)
-                    return;
-                _this.form.reset();
                 _this.values = _this.initValues || {};
                 _this.errorMessages = {};
+                _this.messagesShown = false;
+                _this.fields = {};
+                if (_this.form) {
+                    _this.form.reset();
+                }
                 return _this.initValues;
             };
             this.fieldValid = function (field) { return _this.fields[field] === true; };

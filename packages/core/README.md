@@ -9,7 +9,7 @@ validator.js
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/validator.tool)](https://bundlephobia.com/package/validator.tool)
 [![Coverage Status](https://jaywcjlove.github.io/validator.js/coverage/badges.svg)](https://jaywcjlove.github.io/validator.js/coverage/lcov-report)
 
-Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD. `~712B`
+Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
@@ -43,7 +43,7 @@ function Demo() {
         <input type="email" name="email" />
         <p>
           {validator.current.message('email', data.email, {
-            validate: (val) => /^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
+            validate: (val) => !/^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
           })}
         </p>
       </div>
