@@ -29,6 +29,8 @@ import Validator from 'validator.tool';
 
 ### Used in the React App
 
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/wonderful-andras-dbzbz?fontsize=14&hidenavigation=1&theme=dark)
+
 ```jsx
 import React, { useRef } from 'react';
 import Validator from 'validator.tool';
