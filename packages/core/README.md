@@ -6,12 +6,14 @@ validator.js
 [![Build & Deploy](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml)
 ![No Dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
 [![Get this with npm](https://jaywcjlove.github.io/sb/ico/npm.svg)](https://www.npmjs.com/package/validator.tool)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/validator.tool)](https://bundlephobia.com/package/validator.tool)
+[![Coverage Status](https://jaywcjlove.github.io/validator.js/coverage/badges.svg)](https://jaywcjlove.github.io/validator.js/coverage/lcov-report)
 
-Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.
+Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD. `~712B`
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
-[Install](#install) · [Usage](#usage) · [API](#api) · [options](#options) · [npm](http://npm.im/validator.tool) · [License](#license)
+[Install](#install) · [Usage](#usage) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
 
 ## Install
 
@@ -37,29 +39,29 @@ function Demo() {
   return (
     <form>
       <div>
-        <label for="email">EMail:</label>
+        <label htmlFor="email">EMail:</label>
         <input type="email" name="email" />
         <p>
           {validator.current.message('email', data.email, {
-            validation: (val) => /^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
+            validate: (val) => /^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
           })}
         </p>
       </div>
       <div>
-        <label for="password">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input type="password" name="password" />
         <p>
           {validator.current.message('password', data.password, {
-            validation: (val) => {}
+            validate: (val) => {}
           })}
         </p>
       </div>
       <div>
-        <label for="repassword">Confirm Password:</label>
+        <label htmlFor="repassword">Confirm Password:</label>
         <input type="repassword" name="repassword" />
         <p>
           {validator.current.message('password', data.password, {
-            validation: (val, field) => {}
+            validate: (val, field) => {}
           })}
         </p>
       </div>
@@ -81,6 +83,8 @@ Refer to the [`validator.min.js`](https://unpkg.com/validator.tool/) file in the
 ```
 
 It can also be downloaded via [UNPKG](https://unpkg.com/validator.tool/):
+
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/quirky-bohr-m75fx?fontsize=14&theme=dark)
 
 ```html
 <form id="form">
@@ -107,13 +111,13 @@ var validator = new Validator({
   form: document.getElementById('form'),
   rules: {
     email: {
-      validation: (val) => val ? '' : 'Required!',
+      validate: (val) => val ? '' : 'Required!',
     },
     password: {
-      // validation: (val) => val < 5 || val > 15 ? '字数大于5，小于15' : ''
+      // validate: (val) => val < 5 || val > 15 ? '字数大于5，小于15' : ''
     },
     repassword: {
-      validation: (val) => !val ? 'Required!' : '',
+      validate: (val) => !val ? 'Required!' : '',
     },
   }
 });
@@ -125,7 +129,7 @@ validator.form.onsubmit = (evn) => {
 }
 
 validator.form.onreset = (evn) => {
-  const data = validator.current.reset();
+  const data = validator.reset();
   console.log(data);
 }
 </script>
