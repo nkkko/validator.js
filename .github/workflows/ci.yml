@@ -19,6 +19,7 @@ jobs:
       - run: npm install
       - run: npm run hoist
       - run: npm run build:lib
+      - run: npm run coverage
       - run: npm run build
 
       - run: npm i coverage-badges-cli markdown-to-html-cli -g
