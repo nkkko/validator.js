@@ -3,7 +3,7 @@ validator.js
 
 <!--dividing-->
 
-[![Build Status](https://travis-ci.org/jaywcjlove/validator.js.svg?branch=master)](https://travis-ci.org/jaywcjlove/validator.js)
+[![Build & Deploy](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml)
 ![No Dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
 [![Get this with npm](https://jaywcjlove.github.io/sb/ico/npm.svg)](https://www.npmjs.com/package/validator.tool)
 
