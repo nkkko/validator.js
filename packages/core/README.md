@@ -34,7 +34,13 @@ import React, { useRef } from 'react';
 import Validator from 'validator.tool';
 
 function Demo() {
-  const validator = useRef(new Validator());
+  const validator = useRef(new Validator({
+    validate: (value, values, field) => {
+      if (field === 'password' && !value) {
+        return 'Required!';
+      }
+    }
+  }));
   const [data, setData] = useState({});
   return (
     <form>
@@ -51,18 +57,14 @@ function Demo() {
         <label htmlFor="password">Password:</label>
         <input type="password" name="password" />
         <p>
-          {validator.current.message('password', data.password, {
-            validate: (val) => {}
-          })}
+          {validator.current.message('password', data.password)}
         </p>
       </div>
       <div>
         <label htmlFor="repassword">Confirm Password:</label>
         <input type="repassword" name="repassword" />
         <p>
-          {validator.current.message('password', data.password, {
-            validate: (val, field) => {}
-          })}
+          {validator.current.message('repassword', data.repassword)}
         </p>
       </div>
       <div>
