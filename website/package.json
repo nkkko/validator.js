@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "private": true,
   "homepage": "http://jaywcjlove.github.io/validator.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "validator.tool": "2.0.0-alpha.0"
+    "validator.tool": "2.0.0-alpha.1"
   },
   "devDependencies": {
     "@kkt/less-modules": "6.11.0",
