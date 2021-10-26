@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/validator.js/static/css/main.b3b3fb0b.chunk.css",
+    "main.js": "/validator.js/static/js/main.06467ed2.chunk.js",
+    "main.js.map": "/validator.js/static/js/main.06467ed2.chunk.js.map",
+    "react-vendor.js": "/validator.js/static/js/react-vendor.71d03f0c.chunk.js",
+    "react-vendor.js.map": "/validator.js/static/js/react-vendor.71d03f0c.chunk.js.map",
+    "runtime-main.js": "/validator.js/static/js/runtime-main.304b2027.js",
+    "runtime-main.js.map": "/validator.js/static/js/runtime-main.304b2027.js.map",
+    "index.html": "/validator.js/index.html",
+    "static/css/main.b3b3fb0b.chunk.css.map": "/validator.js/static/css/main.b3b3fb0b.chunk.css.map",
+    "static/js/main.06467ed2.chunk.js.LICENSE.txt": "/validator.js/static/js/main.06467ed2.chunk.js.LICENSE.txt",
+    "static/js/react-vendor.71d03f0c.chunk.js.LICENSE.txt": "/validator.js/static/js/react-vendor.71d03f0c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.304b2027.js",
+    "static/js/react-vendor.71d03f0c.chunk.js",
+    "static/css/main.b3b3fb0b.chunk.css",
+    "static/js/main.06467ed2.chunk.js"
+  ]
+}
