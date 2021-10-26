@@ -88,6 +88,13 @@ export default class Validator {
     }
     return;
   };
+  setValues = (values: Values = {}) => {
+    if (!this.form) {
+      for (let val in values) {
+        this.message(val, values[val]);
+      }
+    }
+  }
   getValues = () => {
     if (this.form) {
       this.setForm(this.form);

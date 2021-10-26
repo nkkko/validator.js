@@ -83,6 +83,14 @@
                 }
                 return;
             };
+            this.setValues = function (values) {
+                if (values === void 0) { values = {}; }
+                if (!_this.form) {
+                    for (var val in values) {
+                        _this.message(val, values[val]);
+                    }
+                }
+            };
             this.getValues = function () {
                 if (_this.form) {
                     _this.setForm(_this.form);
@@ -94,6 +102,7 @@
                     return;
                 _this.form.reset();
                 _this.values = _this.initValues || {};
+                _this.errorMessages = {};
                 return _this.initValues;
             };
             this.fieldValid = function (field) { return _this.fields[field] === true; };

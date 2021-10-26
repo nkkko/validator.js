@@ -28,6 +28,7 @@ export default class Validator {
     setForm: (form: HTMLFormElement) => void;
     /** How you define validation rules and add messages into the form. */
     message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
+    setValues: (values?: Values) => void;
     getValues: () => Partial<Record<string, Value>>;
     reset: () => Partial<Record<string, Value>> | undefined;
     fieldValid: (field: string) => boolean;

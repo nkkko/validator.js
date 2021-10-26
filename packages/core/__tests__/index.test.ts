@@ -18,6 +18,9 @@ it('validator.tool', async () => {
   expect(validator.fieldValid('email')).toBeTruthy();
   expect(validator.getForm()).toBeUndefined();
   expect(validator.reset()).toBeUndefined();
+  expect(validator.setValues({ email: 'test' })).toBeUndefined();
+  expect(validator.fieldValid('email')).toBeTruthy();
+  expect(validator.values.email).toEqual('test');
 });
 
 it('validator.tool options validate', async () => {
@@ -34,6 +37,8 @@ it('validator.tool options validate', async () => {
     validate: (val: string) => `Hi! ${val}.`
   })).toBeUndefined();
   expect(validator.errorMessages.email).toEqual('Hi! kennyiseeyougmail.com.');
+  expect(validator.setValues({ email: 'test' })).toBeUndefined();
+  expect(validator.fieldValid('email')).toBeFalsy();
 });
 
 it('validator.tool options', async () => {
@@ -121,4 +126,6 @@ it('validator.tool form options', async () => {
   expect(validator.message('email', 'hello@gmail.com')).toBeUndefined();
   expect(validator.allValid()).toBeTruthy();
   expect(typeof validator.reset()).toEqual('object');
+  // expect(validator.setValues({ email: 'test' })).toBeUndefined();
+  // expect(validator.fieldValid('email')).toBeFalsy();
 });
