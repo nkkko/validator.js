@@ -98,6 +98,7 @@ export default class Validator {
     if (!this.form) return;
     this.form.reset();
     this.values = this.initValues || {};
+    this.errorMessages = {};
     return this.initValues;
   }
   fieldValid = (field: string) => this.fields[field] === true;
