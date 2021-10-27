@@ -5,9 +5,11 @@
     "test": "tsbb test --env=jsdom",
     "coverage": "tsbb test --env=jsdom --coverage",
     "start": "lerna exec \"npm run start\" --scope website",
-    "build:lib": "lerna exec \"npm run build\" --scope validator.tool",
-    "watch:lib": "lerna exec \"npm run start\" --scope validator.tool",
     "build": "lerna exec \"npm run build\" --scope website",
+    "lib:build": "lerna exec \"npm run build\" --scope validator.tool",
+    "lib:watch": "lerna exec \"npm run start\" --scope validator.tool",
+    "hook:build": "lerna exec \"tsbb build\" --scope @validator.tool/hook",
+    "hook:watch": "lerna exec \"tsbb watch\" --scope @validator.tool/hook",
     "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "bootstrap": "lerna bootstrap",
     "hoist": "lerna bootstrap --hoist"

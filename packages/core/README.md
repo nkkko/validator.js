@@ -13,7 +13,7 @@ Lightweight JavaScript form validation, that had minimal configuration and felt 
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
-[Install](#install) · [Usage](#usage) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
+[Install](#install) · [Usage](#usage) · [Hook Support](https://github.com/jaywcjlove/validator.js/tree/master/packages/hook/README.md) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
 
 ## Install
 
@@ -36,23 +36,18 @@ import { useRef, useState } from 'react';
 import Validator from 'validator.tool';
 
 function Demo() {
+  const [data, setData] = useState({
+    email: 'kennyiseeyou@gmail.com'
+  });
   const validator = useRef(new Validator({
+    initValues: data,
     validate: (value, values, field) => {
       if (field === 'password' && !value) {
         return 'Required!';
       }
     }
   }));
-  const [data, setData] = useState({
-    email: 'kennyiseeyou@gmail.com'
-  });
   const [upState, forceUpdate] = useState(0);
-
-  useEffect(() => {
-    if (!validator.current.initValues) {
-      validator.current.initValues = data;
-    }
-  }, []);
 
   function handleSubmit(evn) {
     evn && evn.preventDefault();
@@ -87,16 +82,12 @@ function Demo() {
       <div>
         <label htmlFor="password">Password:</label>
         <input type="password" name="password" />
-        <p>
-          {validator.current.message('password', data.password)}
-        </p>
+        <p>{validator.current.message('password', data.password)}</p>
       </div>
       <div>
         <label htmlFor="repassword">Confirm Password:</label>
         <input type="repassword" name="repassword" />
-        <p>
-          {validator.current.message('repassword', data.repassword)}
-        </p>
+        <p>{validator.current.message('repassword', data.repassword)}</p>
       </div>
       <div>
         <button type="submit">Submit</button>
@@ -105,6 +96,17 @@ function Demo() {
     </form>
   );
 }
+```
+
+### [Support React Hook](https://github.com/jaywcjlove/validator.js/tree/master/packages/hook/README.md)
+
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@validator.tool/hook)](https://bundlephobia.com/package/@validator.tool/hook)
+[![npm version](https://img.shields.io/npm/v/@validator.tool/hook.svg)](https://www.npmjs.com/package/@validator.tool/hook)
+
+```jsx
+import { useValidator } from '@validator.tool/hook';
+
+const { validator, forceUpdate } = useValidator({});
 ```
 
 ### Used in the React Native App
@@ -255,6 +257,35 @@ export default class Validator {
   allValid(): boolean;
 }
 ```
+
+## Use with third-party packages
+
+### [validator.js](https://github.com/validatorjs/validator.js)
+
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/validator)](https://bundlephobia.com/package/validator)
+
+String validation
+
+```jsx
+import isEmail from 'validator/es/lib/isEmail';
+
+function Demo() {
+  return (
+    <p>
+      {validator.current.message('email', data.email, {
+        validate: (val) => !isEmail(val) ? `The ${val} must be a valid email address.` : ''
+      })}
+    </p>
+  );
+}
+```
+
+### [Zod](https://github.com/vriad/zod)
+
+TypeScript-first schema validation with static type inference
+
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/zod)](https://bundlephobia.com/package/zod)
+
 
 ## Related
 
