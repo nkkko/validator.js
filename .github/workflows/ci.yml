@@ -18,7 +18,9 @@ jobs:
 
       - run: npm install
       - run: npm run hoist
-      - run: npm run build:lib
+      - run: npm run lib:build
+      - run: npm run hook:build
+
       - run: npm run coverage
       - run: npm run build
 
@@ -37,7 +39,11 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/core/package.json
-          # tag: next
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./packages/hook/package.json
 
   release:
     runs-on: ubuntu-20.04
