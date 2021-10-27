@@ -9,6 +9,7 @@ export interface RulesOption {
 export declare type ValidatorOption = {
     messagesShown?: boolean;
     rules?: Rules;
+    initValues?: Values;
     form?: HTMLFormElement | null;
     validate?: RulesOption['validate'];
 };
@@ -30,7 +31,9 @@ export default class Validator {
     message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
     setValues: (values?: Values) => void;
     getValues: () => Partial<Record<string, Value>>;
-    reset: () => Partial<Record<string, Value>> | undefined;
+    reset: () => {
+        [x: string]: Value | undefined;
+    };
     fieldValid: (field: string) => boolean;
     /**
      * Returns a boolean if all the fields pass validation or not.

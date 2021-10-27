@@ -11,16 +11,20 @@ export interface RulesOption {
 export type ValidatorOption = {
   messagesShown?: boolean;
   rules?: Rules;
+  initValues?: Values;
   form?: HTMLFormElement | null;
   validate?: RulesOption['validate'];
 }
 
 export default class Validator {
   constructor(options: ValidatorOption = {}) {
-    const { form, rules, messagesShown, validate } = options;
+    const { form, rules, initValues, messagesShown, validate } = options;
     this.messagesShown = !!messagesShown;
     this.rules = rules || {};
     this.validate = validate;
+    if (initValues) {
+      this.initValues = { ...initValues };
+    }
     if (form) {
       this.setForm(form);
     }
@@ -109,7 +113,7 @@ export default class Validator {
     if (this.form) {
       this.form.reset();
     };
-    return this.initValues;
+    return { ...this.values };
   }
   fieldValid = (field: string) => this.fields[field] === true;
   /**

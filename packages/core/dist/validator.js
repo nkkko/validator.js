@@ -131,13 +131,16 @@
                 if (_this.form) {
                     _this.form.reset();
                 }
-                return _this.initValues;
+                return __assign({}, _this.values);
             };
             this.fieldValid = function (field) { return _this.fields[field] === true; };
-            var form = options.form, rules = options.rules, messagesShown = options.messagesShown, validate = options.validate;
+            var form = options.form, rules = options.rules, initValues = options.initValues, messagesShown = options.messagesShown, validate = options.validate;
             this.messagesShown = !!messagesShown;
             this.rules = rules || {};
             this.validate = validate;
+            if (initValues) {
+                this.initValues = __assign({}, initValues);
+            }
             if (form) {
                 this.setForm(form);
             }
