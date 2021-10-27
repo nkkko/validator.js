@@ -45,7 +45,7 @@ function Demo() {
   const [data, setData] = useState({
     email: 'kennyiseeyou@gmail.com'
   });
-  const [, forceUpdate] = useState();
+  const [upState, forceUpdate] = useState(0);
 
   useEffect(() => {
     if (!validator.current.initValues) {
@@ -56,7 +56,7 @@ function Demo() {
   function handleSubmit(evn) {
     evn && evn.preventDefault();
     validator.current.showMessages();
-    forceUpdate(1);
+    forceUpdate(upState + 1);
   }
 
   function handleReset() {
