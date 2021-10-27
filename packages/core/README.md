@@ -29,7 +29,7 @@ import Validator from 'validator.tool';
 
 ### Used in the React App
 
-[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/wonderful-andras-dbzbz?fontsize=14&hidenavigation=1&theme=dark)
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/used-in-the-react-app-andras-dbzbz-forked-7li45?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import { useRef, useState } from 'react';
@@ -102,6 +102,7 @@ function Demo() {
 
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@validator.tool/hook)](https://bundlephobia.com/package/@validator.tool/hook)
 [![npm version](https://img.shields.io/npm/v/@validator.tool/hook.svg)](https://www.npmjs.com/package/@validator.tool/hook)
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/validator-js-support-hook-andras-dbzbz-dbzbz?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
 import { useValidator } from '@validator.tool/hook';
