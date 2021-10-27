@@ -37,7 +37,7 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./packages/core/package.json
-          tag: next
+          # tag: next
 
   release:
     runs-on: ubuntu-20.04
