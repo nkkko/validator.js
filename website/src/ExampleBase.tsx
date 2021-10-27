@@ -35,7 +35,6 @@ export default function Example() {
     const name = target.name;
     setData({ ...data, [name]: value });
     forceUpdate(upState + 1);
-    console.log('>>>>', value);
   }
   return (
     <Fragment>

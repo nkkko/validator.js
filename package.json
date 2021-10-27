@@ -6,6 +6,7 @@
     "coverage": "tsbb test --env=jsdom --coverage",
     "start": "lerna exec \"npm run start\" --scope website",
     "build": "lerna exec \"npm run build\" --scope website",
+    "lib": "npm run lib:build && npm run hook:build",
     "lib:build": "lerna exec \"npm run build\" --scope validator.tool",
     "lib:watch": "lerna exec \"npm run start\" --scope validator.tool",
     "hook:build": "lerna exec \"tsbb build\" --scope @validator.tool/hook",

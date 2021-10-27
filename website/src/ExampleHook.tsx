@@ -1,4 +1,4 @@
-import { useEffect, useState, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import { useValidator } from '@validator.tool/hook';
 import styles from './App.module.less';
 

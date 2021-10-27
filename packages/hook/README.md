@@ -21,16 +21,12 @@ import { useEffect, useState, Fragment } from 'react';
 import { useValidator } from '@validator.tool/hook';
 
 export default function Demo() {
-  const { validator, forceUpdate } = useValidator({});
   const [data, setData] = useState({
     email: 'kennyiseeyou@gmail.com'
   });
-
-  useEffect(() => {
-    if (!validator.initValues) {
-      validator.initValues = { ...data };
-    }
-  }, []);
+  const { validator, forceUpdate } = useValidator({
+    initValues: data,
+  });
 
   function handleSubmit(evn) {
     evn && evn.preventDefault();
