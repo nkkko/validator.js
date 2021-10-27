@@ -157,6 +157,8 @@ Refer to the [`validator.min.js`](https://unpkg.com/validator.tool/) file in the
 
 It can also be downloaded via [UNPKG](https://unpkg.com/validator.tool/):
 
+CDN: [UNPKG](https://unpkg.com/validator.tool/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/validator.tool/) | [Githack](https://raw.githack.com/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [Statically](https://cdn.statically.io/gh/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [bundle.run](https://bundle.run/validator.tool)
+
 [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/quirky-bohr-m75fx?fontsize=14&theme=dark)
 
 ```html
