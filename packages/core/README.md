@@ -5,7 +5,6 @@ validator.js
 
 [![Build & Deploy](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml)
 ![No Dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
-[![Get this with npm](https://jaywcjlove.github.io/sb/ico/npm.svg)](https://www.npmjs.com/package/validator.tool)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/validator.tool)](https://bundlephobia.com/package/validator.tool)
 [![Coverage Status](https://jaywcjlove.github.io/validator.js/coverage/badges.svg)](https://jaywcjlove.github.io/validator.js/coverage/lcov-report)
 
@@ -32,7 +31,7 @@ import Validator from 'validator.tool';
 [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/wonderful-andras-dbzbz?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import React, { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Validator from 'validator.tool';
 
 function Demo() {
@@ -43,12 +42,41 @@ function Demo() {
       }
     }
   }));
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    email: 'kennyiseeyou@gmail.com'
+  });
+  const [, forceUpdate] = useState();
+
+  useEffect(() => {
+    if (!validator.current.initValues) {
+      validator.current.initValues = data;
+    }
+  }, []);
+
+  function handleSubmit(evn) {
+    evn && evn.preventDefault();
+    validator.current.showMessages();
+    forceUpdate(1);
+  }
+
+  function handleReset() {
+    validator.current.hideMessages();
+    const v = validator.current.reset();
+    setData({ ...v });
+  }
+
+  function handleChange(env) {
+    const target = env.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
+    setData({ ...data, [name]: value });
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit} onReset={handleReset} onChange={handleChange}>
       <div>
         <label htmlFor="email">EMail:</label>
-        <input type="email" name="email" />
+        <input type="email" name="email" defaultValue={data.email} />
         <p>
           {validator.current.message('email', data.email, {
             validate: (val) => !/^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
@@ -76,6 +104,47 @@ function Demo() {
     </form>
   );
 }
+```
+
+### Used in the React Native App
+
+You need to wrap validator with `<Text>` Element.
+
+[![](https://img.shields.io/badge/style-Expo-green?label=Open%20In&logo=expo&style=flat&color=#333)](https://snack.expo.dev/@jaywcjlove/validatorjs-test)
+
+```jsx
+import React, { useRef } from 'react';
+import { Text, View, Button } from 'react-native';
+import Validator from 'validator.tool';
+
+const WelcomeScreen = () => {
+  const [text, onChangeText] = React.useState('Useless Text');
+  const [, forceUpdate] = React.useState();
+  const validator = useRef(new Validator({
+    validate: (value, values, field) => {
+      if (field === 'username' && value.length > 3) {
+        return 'Required!';
+      }
+    },
+  }));
+
+  return (
+    <View>
+      <TextInput onChangeText={onChangeText} value={text} />
+      <Text>
+        {validator.current.message('username', text)}
+      </Text>
+      <Button
+        onPress={() => {
+          validator.current.showMessages();
+          forceUpdate(1);
+        }}
+        title="Submit"
+        color="#841584"
+      />
+    </View>
+  );
+};
 ```
 
 ### Used in the browser client
@@ -146,10 +215,10 @@ export declare type Value = (number | FormDataEntryValue)[] | number | boolean |
 export declare type Values = Partial<Record<string, Value>>;
 export declare type Fields = Partial<Record<string, boolean>>;
 export declare type Rules = Partial<Record<string, RulesOption>>;
-export declare type RulesOption = {
+export interface RulesOption {
   /** Validate the form's values with function. */
-  validate(value?: Value, values?: Validator['values'], field?: string): string | undefined;
-};
+  validate?(value?: Value, values?: Validator['values'], field?: string): string;
+}
 export declare type ValidatorOption = {
   messagesShown?: boolean;
   rules?: Rules;
@@ -172,6 +241,7 @@ export default class Validator {
   setForm: (form: HTMLFormElement) => void;
   /** How you define validation rules and add messages into the form. */
   message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
+  setValues: (values?: Values) => void;
   getValues: () => Partial<Record<string, Value>>;
   reset: () => Partial<Record<string, Value>> | undefined;
   fieldValid: (field: string) => boolean;

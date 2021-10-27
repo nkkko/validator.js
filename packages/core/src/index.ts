@@ -102,7 +102,7 @@ export default class Validator {
     return this.values;
   }
   reset = () => {
-    this.values = this.initValues || {};
+    this.values = { ...this.initValues };
     this.errorMessages = {};
     this.messagesShown = false;
     this.fields = {};
