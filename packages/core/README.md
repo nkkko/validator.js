@@ -4,8 +4,9 @@ validator.js
 <!--dividing-->
 
 [![Build & Deploy](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/validator.js/actions/workflows/ci.yml)
-![No Dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
+[![No Dependencies](https://shields.io/badge/no-dependencies-green?style=flat)](https://www.npmjs.com/package/validator.tool)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/validator.tool)](https://bundlephobia.com/package/validator.tool)
+[![npm version](https://img.shields.io/npm/v/validator.tool.svg)](https://www.npmjs.com/package/validator.tool)
 [![Coverage Status](https://jaywcjlove.github.io/validator.js/coverage/badges.svg)](https://jaywcjlove.github.io/validator.js/coverage/lcov-report)
 
 Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.

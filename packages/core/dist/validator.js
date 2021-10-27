@@ -1,6 +1,6 @@
 /**!
- * validator.tool v2.0.0-alpha.0
- * 轻量级的JavaScript表单验证，字符串验证。没有依赖，支持UMD，~3kb。
+ * validator.tool v2.0.0
+ * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.
  * 
  * Copyright (c) 2021 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)
  * http://jaywcjlove.github.io/validator.js
