@@ -9,17 +9,13 @@ type Data = {
 }
 
 export default function Example() {
-  const validator = useRef(new Validator());
   const [data, setData] = useState<Data>({
     alphanumeric: 6
   });
+  const validator = useRef(new Validator({
+    initValues: data
+  }));
   const [upState, forceUpdate] = useState(0);
-
-  useEffect(() => {
-    if (!validator.current.initValues) {
-      validator.current.initValues = { ...data };
-    }
-  }, []);
 
   function handleSubmit(evn?: React.FormEvent<HTMLFormElement>) {
     evn && evn.preventDefault();
@@ -43,7 +39,7 @@ export default function Example() {
   }
   return (
     <Fragment>
-      <h2 className={styles.title}>Example in React</h2>
+      <h2 className={styles.title}>React Usage Example</h2>
       <form
         className={styles.form}
         onSubmit={handleSubmit}

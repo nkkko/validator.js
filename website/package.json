@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@validator.tool/hook": "2.0.0",
     "validator.tool": "2.0.0"
   },
   "devDependencies": {

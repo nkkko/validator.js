@@ -28,8 +28,7 @@ export default function Example() {
       validator.current.form.onsubmit = (evn) => {
         evn.preventDefault();
         setData(validator.current.getValues());
-        setErrorMessages(validator.current.errorMessages)
-        console.log('>>', validator.current)
+        setErrorMessages(validator.current.errorMessages);
       }
       validator.current.form.onreset = (evn) => {
         const data = validator.current.reset();
@@ -41,7 +40,7 @@ export default function Example() {
 
   return (
     <Fragment>
-      <h2 className={styles.title}>Example in Form</h2>
+      <h2 className={styles.title}>HTML Form Usage Example</h2>
       <form id="form" className={styles.form} ref={form}>
         <div className={styles.group}>
           <label htmlFor="required">Required: </label>

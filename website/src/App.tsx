@@ -5,6 +5,7 @@ import DocumentStr from 'validator.tool/README.md';
 import Header from './Header';
 import Example from './Example';
 import ExampleBase from './ExampleBase';
+import ExampleHook from './ExampleHook';
 import styles from './App.module.less';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <Header />
       <div className={styles.warpper} id="example">
         <GithubCorner fixed target="__blank" zIndex={99999} href="https://github.com/jaywcjlove/validator.js" />
+        <ExampleHook />
         <ExampleBase />
         <Example />
         <MarkdownPreview source={DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '')} />
