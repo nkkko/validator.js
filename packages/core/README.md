@@ -13,7 +13,7 @@ Lightweight JavaScript form validation, that had minimal configuration and felt 
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
-[Install](#install) · [Usage](#usage) · [Hook Support](https://github.com/jaywcjlove/validator.js/tree/master/packages/hook/README.md) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
+[Install](#install) · [Usage](#usage) · [Hook](#support-react-hook) · [React Native](#used-in-the-react-native-app) · [Form](#used-in-the-browser-client) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
 
 ## Install
 
