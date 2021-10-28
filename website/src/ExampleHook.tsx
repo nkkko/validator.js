@@ -1,27 +1,14 @@
 import { useState, Fragment } from 'react';
-import { useValidator } from '@validator.tool/hook';
+import { useValidator, Values } from '@validator.tool/hook';
 import styles from './App.module.less';
 
 export default function Demo() {
   const [data, setData] = useState<any>({
     email: 'kennyiseeyou@gmail.com'
   });
-  const { validator, forceUpdate } = useValidator({
+  const { validator, handleReset, handleSubmit } = useValidator({
     initValues: data,
   });
-
-  function handleSubmit(evn: any) {
-    evn && evn.preventDefault();
-    validator.showMessages();
-    forceUpdate();
-  }
-
-  function handleReset() {
-    validator.hideMessages();
-    const v = validator.reset();
-    setData({ ...v });
-  }
-
   function handleChange(env: any) {
     const target = env.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -29,10 +16,25 @@ export default function Demo() {
     setData({ ...data, [name]: value });
   }
 
+  const onSubmit = (value: Values) => {
+    console.log('value', value)
+  }
+
+  const onReset = (value: Values) => {
+    setData({ ...value });
+  }
+
   return (
     <Fragment>
       <h2 className={styles.title}>Hook Usage Example</h2>
-      <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset} onChange={handleChange}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit)}
+        onReset={handleReset(onReset)}
+        onChange={handleChange}
+        onBlur={handleChange}
+        // onInput={handleChange}
+      >
         <div className={styles.group}>
           <label htmlFor="email">EMail:</label>
           <input type="email" name="email" defaultValue={data.email} className={styles.control} />

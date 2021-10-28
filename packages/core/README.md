@@ -119,29 +119,28 @@ You need to wrap validator with `<Text>` Element.
 ```jsx
 import React, { useRef } from 'react';
 import { Text, View, Button } from 'react-native';
-import Validator from 'validator.tool';
+import { useValidator } from '@validator.tool/hook';
 
 const WelcomeScreen = () => {
   const [text, onChangeText] = React.useState('Useless Text');
-  const [, forceUpdate] = React.useState();
-  const validator = useRef(new Validator({
-    validate: (value, values, field) => {
+  const { validator, forceUpdate } = useValidator({
+    initValues: { text },
+    validate: (value = '', values, field) => {
       if (field === 'username' && value.length > 3) {
-        return 'Required!';
+        return '!! username > 3';
       }
     },
-  }));
-
+  });
   return (
     <View>
       <TextInput onChangeText={onChangeText} value={text} />
       <Text>
-        {validator.current.message('username', text)}
+        {validator.message('username', text)}
       </Text>
       <Button
         onPress={() => {
-          validator.current.showMessages();
-          forceUpdate(1);
+          validator.showMessages();
+          forceUpdate();
         }}
         title="Submit"
         color="#841584"

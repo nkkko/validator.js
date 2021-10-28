@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
-import Validator, { ValidatorOption } from 'validator.tool';
+import Validator, { ValidatorOption, Values } from 'validator.tool';
 
+export * from 'validator.tool';
 export interface UseValidator extends ValidatorOption {}
 export function useValidator(props: UseValidator = {}) {
   const validator = useRef<Validator>(new Validator({ ...props }));
@@ -13,9 +14,24 @@ export function useValidator(props: UseValidator = {}) {
   }, [props.form, validator.current]);
 
   const handleForceUpdate = () => forceUpdate(upState + 1);
-  // return { ...validator.current, forceUpdate: handleForceUpdate };
+  const handleSubmit = (handle?: (value: Values) => void) => (evn: React.FormEvent<HTMLFormElement>) => {
+    evn && evn.preventDefault();
+    validator.current.showMessages();
+    forceUpdate(upState + 1);
+    if (handle) {
+      const val = validator.current.values;
+      handle({ ...validator.current.values });
+    }
+  }
+  const handleReset = (handle?: (value: Values) => void) => (evn: React.FormEvent<HTMLFormElement>) => {
+    validator.current.hideMessages();
+    const val = validator.current.reset();
+    handle && handle(val);
+  }
   return {
     validator: validator.current,
-    forceUpdate: handleForceUpdate
+    forceUpdate: handleForceUpdate,
+    handleSubmit,
+    handleReset,
   }
 }

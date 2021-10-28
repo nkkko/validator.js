@@ -24,20 +24,16 @@ export default function Demo() {
   const [data, setData] = useState({
     email: 'kennyiseeyou@gmail.com'
   });
-  const { validator, forceUpdate } = useValidator({
+  const { validator, handleReset, handleSubmit } = useValidator({
     initValues: data,
   });
 
-  function handleSubmit(evn) {
-    evn && evn.preventDefault();
-    validator.showMessages();
-    forceUpdate();
+  const onSubmit = (value) => {
+    console.log('value', value)
   }
 
-  function handleReset() {
-    validator.hideMessages();
-    const v = validator.reset();
-    setData({ ...v });
+  const onReset = (value) => {
+    setData({ ...value });
   }
 
   function handleChange(env) {
@@ -48,7 +44,12 @@ export default function Demo() {
   }
 
   return (
-    <form onSubmit={handleSubmit} onReset={handleReset} onChange={handleChange}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={handleReset(onReset)}
+      onChange={handleChange}
+      onBlur={handleChange}
+    >
       <div>
         <label htmlFor="email">EMail:</label>
         <input type="email" name="email" defaultValue={data.email} />
