@@ -10,7 +10,7 @@ export default function() {
         <tr>
           <td>
             <div className={styles.nav}>
-              <a href="#validatorjs">Document</a>
+              <a href="#document">Document</a>
               <a href="#example">Example</a>
               <a target="_blank" href="https://github.com/jaywcjlove/validator.js">Source Code</a>
               <a target="_blank" href="https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html">v1</a>

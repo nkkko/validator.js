@@ -17,7 +17,9 @@ export default function App() {
         <ExampleHook />
         <ExampleBase />
         <Example />
-        <MarkdownPreview source={DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '')} />
+      </div>
+      <div id="document">
+        <MarkdownPreview className={styles.warpper} source={DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '')} />
       </div>
     </Fragment>
   );
