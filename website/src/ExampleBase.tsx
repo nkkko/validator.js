@@ -38,7 +38,7 @@ export default function Example() {
   }
   return (
     <Fragment>
-      <h2 className={styles.title}>React Usage Example</h2>
+      <h2 className={styles.title}>React Usage <a href="https://github.com/jaywcjlove/validator.js/blob/master/website/src/ExampleBase.tsx" target="_blank">Example</a></h2>
       <form
         className={styles.form}
         onSubmit={handleSubmit}

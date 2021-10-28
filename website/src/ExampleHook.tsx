@@ -26,7 +26,7 @@ export default function Demo() {
 
   return (
     <Fragment>
-      <h2 className={styles.title}>Hook Usage Example</h2>
+      <h2 className={styles.title}>Hook Usage <a href="https://github.com/jaywcjlove/validator.js/blob/master/website/src/ExampleHook.tsx" target="_blank">Example</a></h2>
       <form
         className={styles.form}
         onSubmit={handleSubmit(onSubmit)}
@@ -51,13 +51,6 @@ export default function Demo() {
             {validator.message('password', data.password, {
               validate: (val: string) => !val ? 'Please enter the password!' : ''
             })}
-          </span>
-        </div>
-        <div className={styles.group}>
-          <label htmlFor="repassword">Confirm Password:</label>
-          <input type="repassword" name="repassword" className={styles.control} />
-          <span className={styles.help}>
-            {validator.message('repassword', data.repassword)}
           </span>
         </div>
         <div style={{ width: '100%' }}>

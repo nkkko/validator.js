@@ -40,7 +40,7 @@ export default function Example() {
 
   return (
     <Fragment>
-      <h2 className={styles.title}>HTML Form Usage Example</h2>
+      <h2 className={styles.title}>HTML Form Usage <a href="https://github.com/jaywcjlove/validator.js/blob/master/website/src/Example.tsx" target="_blank">Example</a></h2>
       <form id="form" className={styles.form} ref={form}>
         <div className={styles.group}>
           <label htmlFor="required">Required: </label>
