@@ -79,6 +79,22 @@ export default function Demo() {
 }
 ```
 
+## API
+
+```ts
+import Validator, { ValidatorOption, Values } from 'validator.tool';
+export * from 'validator.tool';
+export interface UseValidator extends ValidatorOption {}
+export declare function useValidator(props?: UseValidator): {
+  validator: Validator;
+  forceUpdate: () => void;
+  /** Only `Form` Support */
+  handleSubmit: (handle?: ((value: Values) => void) | undefined) => (evn: React.FormEvent<HTMLFormElement>) => void;
+  /** Only `Form` Support */
+  handleReset: (handle?: ((value: Values) => void) | undefined) => (evn: React.FormEvent<HTMLFormElement>) => void;
+};
+```
+
 ## Related
 
 - [validator.tool](https://github.com/jaywcjlove/validator.js) Lightweight JavaScript form validation, that had minimal configuration and felt natural to use.

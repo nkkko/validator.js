@@ -31,7 +31,9 @@ export function useValidator(props: UseValidator = {}) {
   return {
     validator: validator.current,
     forceUpdate: handleForceUpdate,
+    /** Only `Form` Support */
     handleSubmit,
+    /** Only `Form` Support */
     handleReset,
   }
 }
