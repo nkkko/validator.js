@@ -13,18 +13,22 @@ Lightweight JavaScript form validation, that had minimal configuration and felt 
 
 > ⚠️ The [`v1`](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html) version document preview is [here](https://raw.githack.com/jaywcjlove/validator.js/v1-doc/index.html).
 
-[Install](#install) · [Usage](#usage) · [Hook](#support-react-hook) · [React Native](#used-in-the-react-native-app) · [Form](#used-in-the-browser-client) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
+[Install](#install) · [Usage](#usage) · [React](#used-in-the-react-app) · [Hook](#support-react-hook) · [React Native](#used-in-the-react-native-app) · [Form](#used-in-the-browser-client) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
 
 ## Install
 
 ```bash
 $ npm install validator.tool --save
+# Or
+$ npm install @validator.tool/hook --save
 ```
 
 ## Usage
 
 ```js
 import Validator from 'validator.tool';
+// Or
+import { useValidator } from '@validator.tool/hook';
 ```
 
 ### Used in the React App
@@ -33,32 +37,26 @@ import Validator from 'validator.tool';
 
 ```jsx
 import { useRef, useState } from 'react';
-import Validator from 'validator.tool';
+import { useValidator } from '@validator.tool/hook';
 
 function Demo() {
   const [data, setData] = useState({
     email: 'kennyiseeyou@gmail.com'
   });
-  const validator = useRef(new Validator({
+  const { validator, handleReset, handleSubmit } = useValidator({
     initValues: data,
     validate: (value, values, field) => {
       if (field === 'password' && !value) {
         return 'Required!';
       }
     }
-  }));
-  const [upState, forceUpdate] = useState(0);
+  });
 
-  function handleSubmit(evn) {
-    evn && evn.preventDefault();
-    validator.current.showMessages();
-    forceUpdate(upState + 1);
+  const onSubmit = (value: Values) => {
+    console.log('value', value)
   }
-
-  function handleReset() {
-    validator.current.hideMessages();
-    const v = validator.current.reset();
-    setData({ ...v });
+  const onReset = (value: Values) => {
+    setData({ ...value });
   }
 
   function handleChange(env) {
@@ -69,25 +67,26 @@ function Demo() {
   }
 
   return (
-    <form onSubmit={handleSubmit} onReset={handleReset} onChange={handleChange}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={handleReset(onReset)}
+      onChange={handleChange}
+      onBlur={handleChange}
+      // onInput={handleChange}
+    >
       <div>
         <label htmlFor="email">EMail:</label>
         <input type="email" name="email" defaultValue={data.email} />
-        <p>
-          {validator.current.message('email', data.email, {
+        <span>
+          {validator.message('email', data.email, {
             validate: (val) => !/^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
           })}
-        </p>
+        </span>
       </div>
       <div>
         <label htmlFor="password">Password:</label>
         <input type="password" name="password" />
-        <p>{validator.current.message('password', data.password)}</p>
-      </div>
-      <div>
-        <label htmlFor="repassword">Confirm Password:</label>
-        <input type="repassword" name="repassword" />
-        <p>{validator.current.message('repassword', data.repassword)}</p>
+        <span>{validator.message('password', data.password)}</span>
       </div>
       <div>
         <button type="submit">Submit</button>
