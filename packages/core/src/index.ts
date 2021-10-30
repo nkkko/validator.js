@@ -99,13 +99,13 @@ export default class Validator {
       }
     }
   }
-  getValues = () => {
+  getValues = (): Values => {
     if (this.form) {
       this.setForm(this.form);
     }
     return this.values;
   }
-  reset = () => {
+  reset = (): Values => {
     this.values = { ...this.initValues };
     this.errorMessages = {};
     this.messagesShown = false;

@@ -30,10 +30,8 @@ export default class Validator {
     /** How you define validation rules and add messages into the form. */
     message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
     setValues: (values?: Values) => void;
-    getValues: () => Partial<Record<string, Value>>;
-    reset: () => {
-        [x: string]: Value | undefined;
-    };
+    getValues: () => Values;
+    reset: () => Values;
     fieldValid: (field: string) => boolean;
     /**
      * Returns a boolean if all the fields pass validation or not.

@@ -23,6 +23,64 @@ $ npm install validator.tool --save
 $ npm install @validator.tool/hook --save
 ```
 
+```jsx
+import Validator from 'validator.tool';
+
+function Example() {
+  const [data, setData] = useState({
+    email: 'kennyiseeyou@gmail.com'
+  });
+  const validator = useRef(
+    new Validator({
+      initValues: { ...data },
+    })
+  );
+  return (
+    <form>
+      <div>
+        <label htmlFor="email">EMail:</label>
+        <input type="email" name="email" defaultValue={data.email} />
+        <span>
+          {validator.current.message('email', data.email, {
+            validate: (val) => !/^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
+          })}
+        </span>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  )
+}
+```
+
+```jsx
+import { useValidator } from '@validator.tool/hook';
+
+function Example() {
+  const [data, setData] = useState({
+    email: 'kennyiseeyou@gmail.com'
+  });
+  const validator = useValidator({
+    initValues: { ...data },
+  });
+  return (
+    <form onSubmit={...} onReset={...} onChange={...} onBlur={...}>
+      <div>
+        <label htmlFor="email">EMail:</label>
+        <input type="email" name="email" defaultValue={data.email} />
+        <span>
+          {validator.message('email', data.email, {
+            validate: (val) => !/^[A-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? `The ${val} must be a valid email address.` : ''
+          })}
+        </span>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  );
+}
+```
+
 ## Usage
 
 ```js
@@ -226,6 +284,7 @@ export interface RulesOption {
 export declare type ValidatorOption = {
   messagesShown?: boolean;
   rules?: Rules;
+  initValues?: Values;
   form?: HTMLFormElement | null;
   validate?: RulesOption['validate'];
 };
@@ -246,8 +305,8 @@ export default class Validator {
   /** How you define validation rules and add messages into the form. */
   message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
   setValues: (values?: Values) => void;
-  getValues: () => Partial<Record<string, Value>>;
-  reset: () => Partial<Record<string, Value>> | undefined;
+  getValues: () => Values;
+  reset: () => Values;
   fieldValid: (field: string) => boolean;
   /**
    * Returns a boolean if all the fields pass validation or not.
