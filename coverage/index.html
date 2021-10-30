@@ -27,7 +27,9 @@
 <span class="token comment"># Or</span>
 $ <span class="token function">npm</span> <span class="token function">install</span> @validator.tool/hook --save
 </code></pre>
-      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Validator</span></span> <span class="token keyword module">from</span> <span class="token string">'validator.tool'</span><span class="token punctuation">;</span>
+      <h2 id="usage"><a class="anchor" aria-hidden="true" tabindex="-1" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useRef <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Validator</span></span> <span class="token keyword module">from</span> <span class="token string">'validator.tool'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Example</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>data<span class="token punctuation">,</span> setData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -52,10 +54,11 @@ $ <span class="token function">npm</span> <span class="token function">install</
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">Submit</span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>reset<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">Reset</span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>form</span><span class="token punctuation">></span></span>
-  <span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useValidator <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'@validator.tool/hook'</span><span class="token punctuation">;</span>
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useValidator <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'@validator.tool/hook'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Example</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>data<span class="token punctuation">,</span> setData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -80,11 +83,6 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>form</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
-      <h2 id="usage"><a class="anchor" aria-hidden="true" tabindex="-1" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-      <pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Validator</span></span> <span class="token keyword module">from</span> <span class="token string">'validator.tool'</span><span class="token punctuation">;</span>
-<span class="token comment">// Or</span>
-<span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useValidator <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'@validator.tool/hook'</span><span class="token punctuation">;</span>
 </code></pre>
       <h3 id="used-in-the-react-app"><a class="anchor" aria-hidden="true" tabindex="-1" href="#used-in-the-react-app"><span class="octicon octicon-link"></span></a>Used in the React App</h3>
       <p><a href="https://codesandbox.io/embed/used-in-the-react-app-andras-dbzbz-forked-7li45?fontsize=14&#x26;hidenavigation=1&#x26;theme=dark"><img src="https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox" alt="Open in CodeSandbox"></a></p>
