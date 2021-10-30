@@ -23,7 +23,10 @@ $ npm install validator.tool --save
 $ npm install @validator.tool/hook --save
 ```
 
+## Usage
+
 ```jsx
+import { useState, useRef } from 'react';
 import Validator from 'validator.tool';
 
 function Example() {
@@ -49,11 +52,12 @@ function Example() {
       <button type="submit">Submit</button>
       <button type="reset">Reset</button>
     </form>
-  )
+  );
 }
 ```
 
 ```jsx
+import { useState } from 'react';
 import { useValidator } from '@validator.tool/hook';
 
 function Example() {
@@ -79,14 +83,6 @@ function Example() {
     </form>
   );
 }
-```
-
-## Usage
-
-```js
-import Validator from 'validator.tool';
-// Or
-import { useValidator } from '@validator.tool/hook';
 ```
 
 ### Used in the React App
