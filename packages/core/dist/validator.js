@@ -1,5 +1,5 @@
 /**!
- * validator.tool v2.1.0
+ * validator.tool v2.1.1
  * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.
  * 
  * Copyright (c) 2021 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)
