@@ -89,7 +89,7 @@ export declare function useValidator(props?: UseValidator): {
   validator: Validator;
   forceUpdate: () => void;
   /** Only `Form` Support */
-  handleSubmit: (handle?: ((value: Values) => void) | undefined) => (evn: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (handle?: ((value: Values, valid: boolean) => void) | undefined) => (evn: React.FormEvent<HTMLFormElement>) => void;
   /** Only `Form` Support */
   handleReset: (handle?: ((value: Values) => void) | undefined) => (evn: React.FormEvent<HTMLFormElement>) => void;
 };

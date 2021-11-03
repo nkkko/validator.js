@@ -14,13 +14,13 @@ export function useValidator(props: UseValidator = {}) {
   }, [props.form, validator.current]);
 
   const handleForceUpdate = () => forceUpdate(upState + 1);
-  const handleSubmit = (handle?: (value: Values) => void) => (evn: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (handle?: (value: Values, valid: boolean) => void) => (evn: React.FormEvent<HTMLFormElement>) => {
     evn && evn.preventDefault();
     validator.current.showMessages();
     forceUpdate(upState + 1);
     if (handle) {
-      const val = validator.current.values;
-      handle({ ...validator.current.values });
+      const valid = validator.current.allValid();
+      handle({ ...validator.current.values }, valid);
     }
   }
   const handleReset = (handle?: (value: Values) => void) => (evn: React.FormEvent<HTMLFormElement>) => {
