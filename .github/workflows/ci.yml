@@ -65,6 +65,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           head-ref: ${{steps.create_tag.outputs.version}}
+          filter-author: (renovate-bot)
           filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
       - name: Create Release
