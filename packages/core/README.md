@@ -15,6 +15,69 @@ Lightweight JavaScript form validation, that had minimal configuration and felt 
 
 [Install](#install) · [Usage](#usage) · [React](#used-in-the-react-app) · [Hook](#support-react-hook) · [React Native](#used-in-the-react-native-app) · [Form](#used-in-the-browser-client) · [API](#api) · [npm](http://npm.im/validator.tool) · [License](#license)
 
+## Used in the browser client
+
+Refer to the [`validator.min.js`](https://unpkg.com/validator.tool/) file in the application, manually download and link [validator.min.js](https://github.com/jaywcjlove/validator.js/tree/master/packages/core/dist) in HTML.
+
+```html
+<script type="text/javascript" src="dist/validator.min.js"></script>
+```
+
+It can also be downloaded via [UNPKG](https://unpkg.com/validator.tool/):
+
+CDN: [UNPKG](https://unpkg.com/validator.tool/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/validator.tool/) | [Githack](https://raw.githack.com/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [Statically](https://cdn.statically.io/gh/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [bundle.run](https://bundle.run/validator.tool)
+
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/quirky-bohr-m75fx?fontsize=14&theme=dark)
+
+```html
+<form id="form">
+  <div>
+    <label for="email">EMail:</label>
+    <input type="email" name="email" placeholder="" />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password" />
+  </div>
+  <div>
+    <label for="repassword">Confirm Password:</label>
+    <input type="repassword" name="repassword" />
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+</form>
+<script type="text/javascript" src="https://unpkg.com/validator.tool/dist/validator.min.js"></script>
+<script type="text/javascript">
+var validator = new Validator({
+  form: document.getElementById('form'),
+  rules: {
+    email: {
+      validate: (val) => val ? '' : 'Required!',
+    },
+    password: {
+      // validate: (val) => val < 5 || val > 15 ? '字数大于5，小于15' : ''
+    },
+    repassword: {
+      validate: (val) => !val ? 'Required!' : '',
+    },
+  }
+});
+
+validator.form.onsubmit = (evn) => {
+  evn.preventDefault();
+  const values = validator.getValues();
+  console.log(values);
+}
+
+validator.form.onreset = (evn) => {
+  const data = validator.reset();
+  console.log(data);
+}
+</script>
+```
+
 ## Install
 
 ```bash
@@ -201,69 +264,6 @@ const WelcomeScreen = () => {
     </View>
   );
 };
-```
-
-### Used in the browser client
-
-Refer to the [`validator.min.js`](https://unpkg.com/validator.tool/) file in the application, manually download and link [validator.min.js](https://github.com/jaywcjlove/validator.js/tree/master/packages/core/dist) in HTML.
-
-```html
-<script type="text/javascript" src="dist/validator.min.js"></script>
-```
-
-It can also be downloaded via [UNPKG](https://unpkg.com/validator.tool/):
-
-CDN: [UNPKG](https://unpkg.com/validator.tool/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/validator.tool/) | [Githack](https://raw.githack.com/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [Statically](https://cdn.statically.io/gh/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js) | [bundle.run](https://bundle.run/validator.tool)
-
-[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/quirky-bohr-m75fx?fontsize=14&theme=dark)
-
-```html
-<form id="form">
-  <div>
-    <label for="email">EMail:</label>
-    <input type="email" name="email" placeholder="" />
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" name="password" />
-  </div>
-  <div>
-    <label for="repassword">Confirm Password:</label>
-    <input type="repassword" name="repassword" />
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-  </div>
-</form>
-<script type="text/javascript" src="https://unpkg.com/validator.tool/dist/validator.min.js"></script>
-<script type="text/javascript">
-var validator = new Validator({
-  form: document.getElementById('form'),
-  rules: {
-    email: {
-      validate: (val) => val ? '' : 'Required!',
-    },
-    password: {
-      // validate: (val) => val < 5 || val > 15 ? '字数大于5，小于15' : ''
-    },
-    repassword: {
-      validate: (val) => !val ? 'Required!' : '',
-    },
-  }
-});
-
-validator.form.onsubmit = (evn) => {
-  evn.preventDefault();
-  const values = validator.getValues();
-  console.log(values);
-}
-
-validator.form.onreset = (evn) => {
-  const data = validator.reset();
-  console.log(data);
-}
-</script>
 ```
 
 ## API
