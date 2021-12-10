@@ -340,6 +340,36 @@ TypeScript-first schema validation with static type inference
 
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/zod)](https://bundlephobia.com/package/zod)
 
+## Development
+
+To develop, Install dependencies, Get the code:
+
+```bash
+$ git https://github.com/jaywcjlove/validator.js.git
+$ cd validator.js     # Into the directory
+$ npm install         # or  yarn install
+$ npm run bootstrap   # Install monorepo dependency
+```
+
+To develop, run the self-reloading build:
+
+```bash
+$ npm run lib:watch   # Monitor the compiled package `validator.tool`
+$ npm run hook:watch  # Monitor the compiled package `@validator.tool/hook`
+```
+
+Run Document Website Environment.
+
+```bash
+$ npm run start
+```
+
+To contribute, please fork Hotkeys.js, add your patch and tests for it (in the `<rootDir>/packages/**/__tests__/*.{js,jsx,ts,tsx}` folder) and submit a pull request.
+
+```bash
+$ npm run coverage
+$ npm run test # Development model
+```
 
 ## Related
 
