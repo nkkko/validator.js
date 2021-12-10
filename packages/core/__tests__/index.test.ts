@@ -17,10 +17,17 @@ it('validator.tool', async () => {
   expect(validator.errorMessages).toEqual({ });
   expect(validator.fieldValid('email')).toBeTruthy();
   expect(validator.getForm()).toBeUndefined();
-  expect(validator.reset()).toBeUndefined();
+  expect(validator.reset()).toEqual({});
   expect(validator.setValues({ email: 'test' })).toBeUndefined();
   expect(validator.fieldValid('email')).toBeTruthy();
   expect(validator.values.email).toEqual('test');
+});
+
+it('validator.tool values test case', async () => {
+  const validator = new Validator({
+    initValues: { username: 'user' }
+  });
+  expect(validator.values).toEqual({ username: 'user' });
 });
 
 it('validator.tool options validate', async () => {

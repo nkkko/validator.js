@@ -23,6 +23,7 @@ export default class Validator {
     this.rules = rules || {};
     this.validate = validate;
     if (initValues) {
+      this.values = { ...initValues };
       this.initValues = { ...initValues };
     }
     if (form) {
@@ -121,6 +122,9 @@ export default class Validator {
    * @returns Boolean
    */
   allValid() {
+    for (var key in this.values) {
+      this.message(key, this.values[key], this.rules[key]);
+    }
     for (let key in this.fields) {
       if (this.fieldValid(key) === false) {
         return false;

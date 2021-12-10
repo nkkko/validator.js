@@ -1,5 +1,5 @@
 /**!
- * validator.tool v2.2.0
+ * validator.tool v2.2.1
  * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.
  * 
  * Copyright (c) 2021 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)
@@ -139,6 +139,7 @@
             this.rules = rules || {};
             this.validate = validate;
             if (initValues) {
+                this.values = __assign({}, initValues);
                 this.initValues = __assign({}, initValues);
             }
             if (form) {
@@ -150,8 +151,11 @@
          * @returns Boolean
          */
         Validator.prototype.allValid = function () {
-            for (var key in this.fields) {
-                if (this.fieldValid(key) === false) {
+            for (var key in this.values) {
+                this.message(key, this.values[key], this.rules[key]);
+            }
+            for (var key_1 in this.fields) {
+                if (this.fieldValid(key_1) === false) {
                     return false;
                 }
             }
