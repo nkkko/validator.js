@@ -5,6 +5,16 @@ object-assign
 */
 
 /*!
+ * @uiw/copy-to-clipboard v1.0.12
+ * Copy to clipboard.
+ * 
+ * Copyright (c) 2021 Kenny Wang
+ * https://github.com/uiwjs/copy-to-clipboard.git
+ * 
+ * Licensed under the MIT license.
+ */
+
+/*!
  * Determine if an object is a Buffer
  *
  * @author   Feross Aboukhadijeh <https://feross.org>
@@ -54,7 +64,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**! 
- * validator.tool v2.2.1 
+ * validator.tool v2.2.2 
  * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD. 
  * 
  * Copyright (c) 2021 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove) 
