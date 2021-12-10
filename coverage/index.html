@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta keywords="validator,validator.tool,validator.js,validation,validate,sanitization,sanitize,sanitisation,sanitise,assert">
-    <style>body { margin: 0; }.markdown-body { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; max-width: 960px; margin: 28px auto 60px auto; padding: 8px; color: #24292f; background-color: #ffffff; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; font-size: 16px; line-height: 1.5; word-wrap: break-word;}.markdown-body .octicon { display: inline-block; fill: currentColor; vertical-align: text-bottom;}.markdown-body .octicon-video { border: 1px solid #d0d7de !important; border-radius: 6px !important; display: block;}.markdown-body .octicon-video summary { border-bottom: 1px solid #d0d7de !important; padding: 8px 16px !important; cursor: pointer;}.markdown-body .octicon-video > video { display: block !important; max-width: 100% !important; padding: 2px; box-sizing: border-box; border-bottom-right-radius: 6px !important; border-bottom-left-radius: 6px !important;}.markdown-body details.octicon-video:not([open])>*:not(summary) { display: none !important;}.markdown-body details.octicon-video:not([open]) > summary { border-bottom: 0 !important;}.markdown-body .octicon-video summary > svg + span { margin: 4px !important;}.markdown-body h1:hover a.anchor .octicon-link:before,.markdown-body h2:hover a.anchor .octicon-link:before,.markdown-body h3:hover a.anchor .octicon-link:before,.markdown-body h4:hover a.anchor .octicon-link:before,.markdown-body h5:hover a.anchor .octicon-link:before,.markdown-body h6:hover a.anchor .octicon-link:before { width: 16px; height: 16px; content: ' '; display: inline-block; background-color: currentColor; -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>"); mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");}.markdown-body a.anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1; min-width: 16px;}.markdown-body a.anchor:focus { outline: none;}.markdown-body h1:hover a.anchor,.markdown-body h2:hover a.anchor,.markdown-body h3:hover a.anchor,.markdown-body h4:hover a.anchor,.markdown-body h5:hover a.anchor,.markdown-body h6:hover a.anchor { text-decoration: none;}.markdown-body h1:hover a.anchor .octicon-link,.markdown-body h2:hover a.anchor .octicon-link,.markdown-body h3:hover a.anchor .octicon-link,.markdown-body h4:hover a.anchor .octicon-link,.markdown-body h5:hover a.anchor .octicon-link,.markdown-body h6:hover a.anchor .octicon-link { visibility: visible;}.markdown-body details,.markdown-body figcaption,.markdown-body figure { display: block;}.markdown-body summary { display: list-item;}.markdown-body a { background-color: transparent; color: #0969da; text-decoration: none;}.markdown-body a:active,.markdown-body a:hover { outline-width: 0;}.markdown-body abbr[title] { border-bottom: none; -webkit-text-decoration: underline dotted; text-decoration: underline dotted;}.markdown-body b,.markdown-body strong { font-weight: 600;}.markdown-body dfn { font-style: italic;}.markdown-body h1 { margin: .67em 0; font-weight: 600; padding-bottom: .3em; font-size: 2em; border-bottom: 1px solid hsla(210,18%,87%,1);}.markdown-body mark { background-color: #ff0; color: #24292f;}.markdown-body small { font-size: 90%;}.markdown-body sub,.markdown-body sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}.markdown-body sub { bottom: -0.25em;}.markdown-body sup { top: -0.5em;}.markdown-body img { border-style: none; max-width: 100%; box-sizing: content-box; background-color: #ffffff;}.markdown-body code,.markdown-body kbd,.markdown-body pre,.markdown-body samp { font-family: monospace,monospace; font-size: 1em;}.markdown-body figure { margin: 1em 40px;}.markdown-body hr { box-sizing: content-box; overflow: hidden; background: transparent; border-bottom: 1px solid hsla(210,18%,87%,1); height: .25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0;}.markdown-body html [type=button],.markdown-body [type=reset],.markdown-body [type=submit] { -webkit-appearance: button;}.markdown-body [type=button]::-moz-focus-inner,.markdown-body [type=reset]::-moz-focus-inner,.markdown-body [type=submit]::-moz-focus-inner { border-style: none; padding: 0;}.markdown-body [type=button]:-moz-focusring,.markdown-body [type=reset]:-moz-focusring,.markdown-body [type=submit]:-moz-focusring { outline: 1px dotted ButtonText;}.markdown-body [type=checkbox],.markdown-body [type=radio] { box-sizing: border-box; padding: 0;}.markdown-body [type=number]::-webkit-inner-spin-button,.markdown-body [type=number]::-webkit-outer-spin-button { height: auto;}.markdown-body [type=search] { -webkit-appearance: textfield; outline-offset: -2px;}.markdown-body [type=search]::-webkit-search-cancel-button,.markdown-body [type=search]::-webkit-search-decoration { -webkit-appearance: none;}.markdown-body ::-webkit-input-placeholder { color: inherit; opacity: .54;}.markdown-body ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit;}.markdown-body a:hover { text-decoration: underline;}.markdown-body hr::before { display: table; content: "";}.markdown-body hr::after { display: table; clear: both; content: "";}.markdown-body table { border-spacing: 0; border-collapse: collapse; display: block; width: max-content; max-width: 100%; overflow: auto;}.markdown-body td,.markdown-body th { padding: 0;}.markdown-body details summary { cursor: pointer;}.markdown-body details:not([open])>*:not(summary) { display: none !important;}.markdown-body kbd { display: inline-block; padding: 3px 5px; font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; line-height: 10px; color: #24292f; vertical-align: middle; background-color: #f6f8fa; border: solid 1px rgba(175,184,193,0.2); border-bottom-color: rgba(175,184,193,0.2); border-radius: 6px; box-shadow: inset 0 -1px 0 rgba(175,184,193,0.2);}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25;}.markdown-body h2 { font-weight: 600; padding-bottom: .3em; font-size: 1.5em; border-bottom: 1px solid hsla(210,18%,87%,1);}.markdown-body h3 { font-weight: 600; font-size: 1.25em;}.markdown-body h4 { font-weight: 600; font-size: 1em;}.markdown-body h5 { font-weight: 600; font-size: .875em;}.markdown-body h6 { font-weight: 600; font-size: .85em; color: #57606a;}.markdown-body p { margin-top: 0; margin-bottom: 10px;}.markdown-body blockquote { margin: 0; padding: 0 1em; color: #57606a; border-left: .25em solid #d0d7de;}.markdown-body ul,.markdown-body ol { margin-top: 0; margin-bottom: 0; padding-left: 2em;}.markdown-body ol ol,.markdown-body ul ol { list-style-type: lower-roman;}.markdown-body ul ul ol,.markdown-body ul ol ol,.markdown-body ol ul ol,.markdown-body ol ol ol { list-style-type: lower-alpha;}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul { margin-top: 0; margin-bottom: 0;}.markdown-body dd { margin-left: 0;}.markdown-body tt,.markdown-body code { font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; font-size: 12px;}.markdown-body pre { margin-top: 0; margin-bottom: 0; font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; font-size: 12px; word-wrap: normal;}.markdown-body :-ms-input-placeholder { color: #6e7781; opacity: 1;}.markdown-body ::-ms-input-placeholder { color: #6e7781; opacity: 1;}.markdown-body ::placeholder { color: #6e7781; opacity: 1;}.markdown-body [data-catalyst] { display: block;}.markdown-body g-emoji { font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-size: 1em; font-style: normal !important; font-weight: 400; line-height: 1; vertical-align: -0.075em;}.markdown-body g-emoji img { width: 1em; height: 1em;}.markdown-body::before { display: table; content: "";}.markdown-body::after { display: table; clear: both; content: "";}.markdown-body>*:first-child { margin-top: 0 !important;}.markdown-body>*:last-child { margin-bottom: 0 !important;}.markdown-body a:not([href]) { color: inherit; text-decoration: none;}.markdown-body .absent { color: #cf222e;}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre,.markdown-body details { margin-top: 0; margin-bottom: 16px;}.markdown-body blockquote>:first-child { margin-top: 0;}.markdown-body blockquote>:last-child { margin-bottom: 0;}.markdown-body sup>a::before { content: "[";}.markdown-body sup>a::after { content: "]";}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link { color: #24292f; vertical-align: middle; visibility: hidden;}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code { padding: 0 .2em; font-size: inherit;}.markdown-body ul.no-list,.markdown-body ol.no-list { padding: 0; list-style-type: none;}.markdown-body ol[type="1"] { list-style-type: decimal;}.markdown-body ol[type=a] { list-style-type: lower-alpha;}.markdown-body ol[type=i] { list-style-type: lower-roman;}.markdown-body div>ol:not([type]) { list-style-type: decimal;}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul { margin-top: 0; margin-bottom: 0;}.markdown-body li>p { margin-top: 16px;}.markdown-body li+li { margin-top: .25em;}.markdown-body dl { padding: 0;}.markdown-body dl dt { padding: 0; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: 600;}.markdown-body dl dd { padding: 0 16px; margin-bottom: 16px;}.markdown-body table th { font-weight: 600;}.markdown-body table th,.markdown-body table td { padding: 6px 13px; border: 1px solid #d0d7de;}.markdown-body table tr { background-color: #ffffff; border-top: 1px solid hsla(210,18%,87%,1);}.markdown-body table tr:nth-child(2n) { background-color: #f6f8fa;}.markdown-body table img { background-color: transparent;}.markdown-body img[align=right] { padding-left: 20px;}.markdown-body img[align=left] { padding-right: 20px;}.markdown-body .emoji { max-width: none; vertical-align: text-top; background-color: transparent;}.markdown-body span.frame { display: block; overflow: hidden;}.markdown-body span.frame>span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0 0; overflow: hidden; border: 1px solid #d0d7de;}.markdown-body span.frame span img { display: block; float: left;}.markdown-body span.frame span span { display: block; padding: 5px 0 0; clear: both; color: #24292f;}.markdown-body span.align-center { display: block; overflow: hidden; clear: both;}.markdown-body span.align-center>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: center;}.markdown-body span.align-center span img { margin: 0 auto; text-align: center;}.markdown-body span.align-right { display: block; overflow: hidden; clear: both;}.markdown-body span.align-right>span { display: block; margin: 13px 0 0; overflow: hidden; text-align: right;}.markdown-body span.align-right span img { margin: 0; text-align: right;}.markdown-body span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden;}.markdown-body span.float-left span { margin: 13px 0 0;}.markdown-body span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden;}.markdown-body span.float-right>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: right;}.markdown-body code,.markdown-body tt { padding: .2em .4em; margin: 0; font-size: 85%; background-color: rgba(175,184,193,0.2); border-radius: 6px;}.markdown-body code br,.markdown-body tt br { display: none;}.markdown-body del code { text-decoration: inherit;}.markdown-body pre code { font-size: 100%;}.markdown-body pre>code { padding: 0; margin: 0; word-break: normal; white-space: pre; background: transparent; border: 0;}.markdown-body .highlight { margin-bottom: 16px;}.markdown-body .highlight pre { margin-bottom: 0; word-break: normal;}.markdown-body .highlight pre,.markdown-body pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 6px;}.markdown-body pre code,.markdown-body pre tt { display: inline; max-width: auto; padding: 0; margin: 0; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0;}.markdown-body .csv-data td,.markdown-body .csv-data th { padding: 5px; overflow: hidden; font-size: 12px; line-height: 1; text-align: left; white-space: nowrap;}.markdown-body .csv-data .blob-num { padding: 10px 8px 9px; text-align: right; background: #ffffff; border: 0;}.markdown-body .csv-data tr { border-top: 0;}.markdown-body .csv-data th { font-weight: 600; background: #f6f8fa; border-top: 0;}.markdown-body .footnotes { font-size: 12px; color: #57606a; border-top: 1px solid #d0d7de;}.markdown-body .footnotes ol { padding-left: 16px;}.markdown-body .footnotes li { position: relative;}.markdown-body .footnotes li:target::before { position: absolute; top: -8px; right: -8px; bottom: -8px; left: -24px; pointer-events: none; content: ""; border: 2px solid #0969da; border-radius: 6px;}.markdown-body .footnotes li:target { color: #24292f;}.markdown-body .footnotes .data-footnote-backref g-emoji { font-family: monospace;}.markdown-body [hidden] { display: none !important;}.markdown-body ::-webkit-calendar-picker-indicator { filter: invert(50%);}/** language color **/.markdown-body .token.tag .attr-value { color: #032f62;}.markdown-body .token.property,.markdown-body .token.tag,.markdown-body .token.boolean,.markdown-body .token.number,.markdown-body .token.function-name,.markdown-body .token.constant,.markdown-body .token.symbol,.markdown-body .token.deleted { color: #0060c9;}.markdown-body .token.punctuation { color: #a0a0a0;}.markdown-body code[class*="language-"] { color: black;}.markdown-body code[class*="language-"] .token.selector,.markdown-body code[class*="language-"] .token.string,.markdown-body code[class*="language-"] .token.attr-name,.markdown-body code[class*="language-"] .token.content,.markdown-body code[class*="language-"] .token.char,.markdown-body code[class*="language-"] .token.class-name,.markdown-body code[class*="language-"] .token.function,.markdown-body code[class*="language-"] .token.builtin { color: #6f42c1;}.markdown-body code[class*="language-"] .token.inserted { color: #22863a; background-color: #f0fff4;}.markdown-body code[class*="language-"] .token.deleted { color: #b31d28; background-color: #ffeef0;}.markdown-body code[class*="language-"] .code-block { color: #032f62;}.markdown-body code[class*="language-"] .token.comment,.markdown-body code[class*="language-"] .token.block-comment,.markdown-body code[class*="language-"] .token.prolog,.markdown-body code[class*="language-"] .token.doctype,.markdown-body code[class*="language-"] .token.cdata { color: #7D8B99;}.markdown-body code[class*="language-"] .token.punctuation { color: #a0a0a0;}.markdown-body code[class*="language-"] .token.operator,.markdown-body code[class*="language-"] .token.entity,.markdown-body code[class*="language-"] .token.variable { color: #d73a49; background: rgba(255, 255, 255, 0.5);}.markdown-body code[class*="language-"] .token.url { color: #0027ff;}.markdown-body code[class*="language-"] .token.atrule,.markdown-body code[class*="language-"] .token.attr-value { color: #004698;}.markdown-body code[class*="language-"] .token.keyword { color: #d63200;}.markdown-body code[class*="language-"] .token.regex,.markdown-body code[class*="language-"] .token.important { color: #e90;}.markdown-body code[class*="language-"] .token.string { color: #0a53c1;}</style>
+    <style>body { margin: 0; }.markdown-body { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; max-width: 960px; margin: 28px auto 60px auto; padding: 8px; color: #24292f; background-color: #ffffff; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; font-size: 16px; line-height: 1.5; word-wrap: break-word;}.markdown-body .octicon { display: inline-block; fill: currentColor; vertical-align: text-bottom;}.markdown-body pre { position: relative;}.markdown-body pre .copied { visibility: hidden; display: flex; position: absolute; cursor: pointer; color: #a5afbb; top: 6px; right: 6px; border-radius: 5px; background: #e3e3e3; padding: 6px; font-size: 12px; transition: all .3s;}.markdown-body pre:hover .copied { visibility: visible;}.markdown-body pre:hover .copied:hover { background: #4caf50; color: #fff;}.markdown-body pre:hover .copied:active,.markdown-body pre .copied.active { background: #2e9b33; color: #fff;}.markdown-body pre .copied .octicon-copy { display: block;}.markdown-body pre .copied .octicon-check { display: none;}.markdown-body pre .active .octicon-copy { display: none;}.markdown-body pre .active .octicon-check { display: block;}.markdown-body .octicon-video { border: 1px solid #d0d7de !important; border-radius: 6px !important; display: block;}.markdown-body .octicon-video summary { border-bottom: 1px solid #d0d7de !important; padding: 8px 16px !important; cursor: pointer;}.markdown-body .octicon-video > video { display: block !important; max-width: 100% !important; padding: 2px; box-sizing: border-box; border-bottom-right-radius: 6px !important; border-bottom-left-radius: 6px !important;}.markdown-body details.octicon-video:not([open])>*:not(summary) { display: none !important;}.markdown-body details.octicon-video:not([open]) > summary { border-bottom: 0 !important;}.markdown-body .octicon-video summary > svg + span { margin: 4px !important;}.markdown-body h1:hover a.anchor .octicon-link:before,.markdown-body h2:hover a.anchor .octicon-link:before,.markdown-body h3:hover a.anchor .octicon-link:before,.markdown-body h4:hover a.anchor .octicon-link:before,.markdown-body h5:hover a.anchor .octicon-link:before,.markdown-body h6:hover a.anchor .octicon-link:before { width: 16px; height: 16px; content: ' '; display: inline-block; background-color: currentColor; -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>"); mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");}.markdown-body a.anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1; min-width: 16px;}.markdown-body a.anchor:focus { outline: none;}.markdown-body h1:hover a.anchor,.markdown-body h2:hover a.anchor,.markdown-body h3:hover a.anchor,.markdown-body h4:hover a.anchor,.markdown-body h5:hover a.anchor,.markdown-body h6:hover a.anchor { text-decoration: none;}.markdown-body h1:hover a.anchor .octicon-link,.markdown-body h2:hover a.anchor .octicon-link,.markdown-body h3:hover a.anchor .octicon-link,.markdown-body h4:hover a.anchor .octicon-link,.markdown-body h5:hover a.anchor .octicon-link,.markdown-body h6:hover a.anchor .octicon-link { visibility: visible;}.markdown-body details,.markdown-body figcaption,.markdown-body figure { display: block;}.markdown-body summary { display: list-item;}.markdown-body a { background-color: transparent; color: #0969da; text-decoration: none;}.markdown-body a:active,.markdown-body a:hover { outline-width: 0;}.markdown-body abbr[title] { border-bottom: none; -webkit-text-decoration: underline dotted; text-decoration: underline dotted;}.markdown-body b,.markdown-body strong { font-weight: 600;}.markdown-body dfn { font-style: italic;}.markdown-body h1 { margin: .67em 0; font-weight: 600; padding-bottom: .3em; font-size: 2em; border-bottom: 1px solid hsla(210,18%,87%,1);}.markdown-body mark { background-color: #ff0; color: #24292f;}.markdown-body small { font-size: 90%;}.markdown-body sub,.markdown-body sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}.markdown-body sub { bottom: -0.25em;}.markdown-body sup { top: -0.5em;}.markdown-body img { border-style: none; max-width: 100%; box-sizing: content-box; background-color: #ffffff;}.markdown-body code,.markdown-body kbd,.markdown-body pre,.markdown-body samp { font-family: monospace,monospace; font-size: 1em;}.markdown-body figure { margin: 1em 40px;}.markdown-body hr { box-sizing: content-box; overflow: hidden; background: transparent; border-bottom: 1px solid hsla(210,18%,87%,1); height: .25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0;}.markdown-body html [type=button],.markdown-body [type=reset],.markdown-body [type=submit] { -webkit-appearance: button;}.markdown-body [type=button]::-moz-focus-inner,.markdown-body [type=reset]::-moz-focus-inner,.markdown-body [type=submit]::-moz-focus-inner { border-style: none; padding: 0;}.markdown-body [type=button]:-moz-focusring,.markdown-body [type=reset]:-moz-focusring,.markdown-body [type=submit]:-moz-focusring { outline: 1px dotted ButtonText;}.markdown-body [type=checkbox],.markdown-body [type=radio] { box-sizing: border-box; padding: 0;}.markdown-body [type=number]::-webkit-inner-spin-button,.markdown-body [type=number]::-webkit-outer-spin-button { height: auto;}.markdown-body [type=search] { -webkit-appearance: textfield; outline-offset: -2px;}.markdown-body [type=search]::-webkit-search-cancel-button,.markdown-body [type=search]::-webkit-search-decoration { -webkit-appearance: none;}.markdown-body ::-webkit-input-placeholder { color: inherit; opacity: .54;}.markdown-body ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit;}.markdown-body a:hover { text-decoration: underline;}.markdown-body hr::before { display: table; content: "";}.markdown-body hr::after { display: table; clear: both; content: "";}.markdown-body table { border-spacing: 0; border-collapse: collapse; display: block; width: max-content; max-width: 100%; overflow: auto;}.markdown-body td,.markdown-body th { padding: 0;}.markdown-body details summary { cursor: pointer;}.markdown-body details:not([open])>*:not(summary) { display: none !important;}.markdown-body kbd { display: inline-block; padding: 3px 5px; font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; line-height: 10px; color: #24292f; vertical-align: middle; background-color: #f6f8fa; border: solid 1px rgba(175,184,193,0.2); border-bottom-color: rgba(175,184,193,0.2); border-radius: 6px; box-shadow: inset 0 -1px 0 rgba(175,184,193,0.2);}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25;}.markdown-body h2 { font-weight: 600; padding-bottom: .3em; font-size: 1.5em; border-bottom: 1px solid hsla(210,18%,87%,1);}.markdown-body h3 { font-weight: 600; font-size: 1.25em;}.markdown-body h4 { font-weight: 600; font-size: 1em;}.markdown-body h5 { font-weight: 600; font-size: .875em;}.markdown-body h6 { font-weight: 600; font-size: .85em; color: #57606a;}.markdown-body p { margin-top: 0; margin-bottom: 10px;}.markdown-body blockquote { margin: 0; padding: 0 1em; color: #57606a; border-left: .25em solid #d0d7de;}.markdown-body ul,.markdown-body ol { margin-top: 0; margin-bottom: 0; padding-left: 2em;}.markdown-body ol ol,.markdown-body ul ol { list-style-type: lower-roman;}.markdown-body ul ul ol,.markdown-body ul ol ol,.markdown-body ol ul ol,.markdown-body ol ol ol { list-style-type: lower-alpha;}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul { margin-top: 0; margin-bottom: 0;}.markdown-body dd { margin-left: 0;}.markdown-body tt,.markdown-body code { font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; font-size: 12px;}.markdown-body pre { margin-top: 0; margin-bottom: 0; font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; word-wrap: normal;}.markdown-body :-ms-input-placeholder { color: #6e7781; opacity: 1;}.markdown-body ::-ms-input-placeholder { color: #6e7781; opacity: 1;}.markdown-body ::placeholder { color: #6e7781; opacity: 1;}.markdown-body [data-catalyst] { display: block;}.markdown-body g-emoji { font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-size: 1em; font-style: normal !important; font-weight: 400; line-height: 1; vertical-align: -0.075em;}.markdown-body g-emoji img { width: 1em; height: 1em;}.markdown-body::before { display: table; content: "";}.markdown-body::after { display: table; clear: both; content: "";}.markdown-body>*:first-child { margin-top: 0 !important;}.markdown-body>*:last-child { margin-bottom: 0 !important;}.markdown-body a:not([href]) { color: inherit; text-decoration: none;}.markdown-body .absent { color: #cf222e;}.markdown-body p,.markdown-body blockquote,.markdown-body ul,.markdown-body ol,.markdown-body dl,.markdown-body table,.markdown-body pre,.markdown-body details { margin-top: 0; margin-bottom: 16px;}.markdown-body blockquote>:first-child { margin-top: 0;}.markdown-body blockquote>:last-child { margin-bottom: 0;}.markdown-body sup>a::before { content: "[";}.markdown-body sup>a::after { content: "]";}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link { color: #24292f; vertical-align: middle; visibility: hidden;}.markdown-body h1 tt,.markdown-body h1 code,.markdown-body h2 tt,.markdown-body h2 code,.markdown-body h3 tt,.markdown-body h3 code,.markdown-body h4 tt,.markdown-body h4 code,.markdown-body h5 tt,.markdown-body h5 code,.markdown-body h6 tt,.markdown-body h6 code { padding: 0 .2em; font-size: inherit;}.markdown-body ul.no-list,.markdown-body ol.no-list { padding: 0; list-style-type: none;}.markdown-body ol[type="1"] { list-style-type: decimal;}.markdown-body ol[type=a] { list-style-type: lower-alpha;}.markdown-body ol[type=i] { list-style-type: lower-roman;}.markdown-body div>ol:not([type]) { list-style-type: decimal;}.markdown-body ul ul,.markdown-body ul ol,.markdown-body ol ol,.markdown-body ol ul { margin-top: 0; margin-bottom: 0;}.markdown-body li>p { margin-top: 16px;}.markdown-body li+li { margin-top: .25em;}.markdown-body dl { padding: 0;}.markdown-body dl dt { padding: 0; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: 600;}.markdown-body dl dd { padding: 0 16px; margin-bottom: 16px;}.markdown-body table th { font-weight: 600;}.markdown-body table th,.markdown-body table td { padding: 6px 13px; border: 1px solid #d0d7de;}.markdown-body table tr { background-color: #ffffff; border-top: 1px solid hsla(210,18%,87%,1);}.markdown-body table tr:nth-child(2n) { background-color: #f6f8fa;}.markdown-body table img { background-color: transparent;}.markdown-body img[align=right] { padding-left: 20px;}.markdown-body img[align=left] { padding-right: 20px;}.markdown-body .emoji { max-width: none; vertical-align: text-top; background-color: transparent;}.markdown-body span.frame { display: block; overflow: hidden;}.markdown-body span.frame>span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0 0; overflow: hidden; border: 1px solid #d0d7de;}.markdown-body span.frame span img { display: block; float: left;}.markdown-body span.frame span span { display: block; padding: 5px 0 0; clear: both; color: #24292f;}.markdown-body span.align-center { display: block; overflow: hidden; clear: both;}.markdown-body span.align-center>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: center;}.markdown-body span.align-center span img { margin: 0 auto; text-align: center;}.markdown-body span.align-right { display: block; overflow: hidden; clear: both;}.markdown-body span.align-right>span { display: block; margin: 13px 0 0; overflow: hidden; text-align: right;}.markdown-body span.align-right span img { margin: 0; text-align: right;}.markdown-body span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden;}.markdown-body span.float-left span { margin: 13px 0 0;}.markdown-body span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden;}.markdown-body span.float-right>span { display: block; margin: 13px auto 0; overflow: hidden; text-align: right;}.markdown-body code,.markdown-body tt { padding: .2em .4em; margin: 0; font-size: 85%; background-color: rgba(175,184,193,0.2); border-radius: 6px;}.markdown-body code br,.markdown-body tt br { display: none;}.markdown-body del code { text-decoration: inherit;}.markdown-body pre code { font-size: 100%;}.markdown-body pre>code { padding: 0; margin: 0; word-break: normal; white-space: pre; background: transparent; border: 0;}.markdown-body .highlight { margin-bottom: 16px;}.markdown-body .highlight pre { margin-bottom: 0; word-break: normal;}.markdown-body pre code { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 6px;}.markdown-body pre code,.markdown-body pre tt { display: block; margin: 0; word-wrap: normal; border: 0;}.markdown-body .csv-data td,.markdown-body .csv-data th { padding: 5px; overflow: hidden; font-size: 12px; line-height: 1; text-align: left; white-space: nowrap;}.markdown-body .csv-data .blob-num { padding: 10px 8px 9px; text-align: right; background: #ffffff; border: 0;}.markdown-body .csv-data tr { border-top: 0;}.markdown-body .csv-data th { font-weight: 600; background: #f6f8fa; border-top: 0;}.markdown-body .footnotes { font-size: 12px; color: #57606a; border-top: 1px solid #d0d7de;}.markdown-body .footnotes ol { padding-left: 16px;}.markdown-body .footnotes li { position: relative;}.markdown-body .footnotes li:target::before { position: absolute; top: -8px; right: -8px; bottom: -8px; left: -24px; pointer-events: none; content: ""; border: 2px solid #0969da; border-radius: 6px;}.markdown-body .footnotes li:target { color: #24292f;}.markdown-body .footnotes .data-footnote-backref g-emoji { font-family: monospace;}.markdown-body [hidden] { display: none !important;}.markdown-body ::-webkit-calendar-picker-indicator { filter: invert(50%);}/** language color **/.markdown-body .token.tag .attr-value { color: #032f62;}.markdown-body .token.property,.markdown-body .token.tag,.markdown-body .token.boolean,.markdown-body .token.number,.markdown-body .token.function-name,.markdown-body .token.constant,.markdown-body .token.symbol,.markdown-body .token.deleted { color: #0060c9;}.markdown-body .token.punctuation { color: #a0a0a0;}.markdown-body code[class*="language-"] { color: black;}.markdown-body code[class*="language-"] .token.selector,.markdown-body code[class*="language-"] .token.string,.markdown-body code[class*="language-"] .token.attr-name,.markdown-body code[class*="language-"] .token.content,.markdown-body code[class*="language-"] .token.char,.markdown-body code[class*="language-"] .token.class-name,.markdown-body code[class*="language-"] .token.function,.markdown-body code[class*="language-"] .token.builtin { color: #6f42c1;}.markdown-body code[class*="language-"] .token.inserted { color: #22863a; background-color: #f0fff4;}.markdown-body code[class*="language-"] .token.deleted { color: #b31d28; background-color: #ffeef0;}.markdown-body code[class*="language-"] .code-block { color: #032f62;}.markdown-body code[class*="language-"] .token.comment,.markdown-body code[class*="language-"] .token.block-comment,.markdown-body code[class*="language-"] .token.prolog,.markdown-body code[class*="language-"] .token.doctype,.markdown-body code[class*="language-"] .token.cdata { color: #7D8B99;}.markdown-body code[class*="language-"] .token.punctuation { color: #a0a0a0;}.markdown-body code[class*="language-"] .token.operator,.markdown-body code[class*="language-"] .token.entity,.markdown-body code[class*="language-"] .token.variable { color: #d73a49; background: rgba(255, 255, 255, 0.5);}.markdown-body code[class*="language-"] .token.url { color: #0027ff;}.markdown-body code[class*="language-"] .token.atrule,.markdown-body code[class*="language-"] .token.attr-value { color: #004698;}.markdown-body code[class*="language-"] .token.keyword { color: #d63200;}.markdown-body code[class*="language-"] .token.regex,.markdown-body code[class*="language-"] .token.important { color: #e90;}.markdown-body code[class*="language-"] .token.string { color: #0a53c1;}</style>
     <style></style>
   </head>
   <body>
@@ -25,7 +25,8 @@
       <h2 id="used-in-the-browser-client"><a class="anchor" aria-hidden="true" tabindex="-1" href="#used-in-the-browser-client"><span class="octicon octicon-link"></span></a>Used in the browser client</h2>
       <p>Refer to the <a href="https://unpkg.com/validator.tool/"><code>validator.min.js</code></a> file in the application, manually download and link <a href="https://github.com/jaywcjlove/validator.js/tree/master/packages/core/dist">validator.min.js</a> in HTML.</p>
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dist/validator.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="<script type=&#x22;text/javascript&#x22; src=&#x22;dist/validator.min.js&#x22;></script>
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <p>It can also be downloaded via <a href="https://unpkg.com/validator.tool/">UNPKG</a>:</p>
       <p>CDN: <a href="https://unpkg.com/validator.tool/dist/">UNPKG</a> | <a href="https://cdn.jsdelivr.net/npm/validator.tool/">jsDelivr</a> | <a href="https://raw.githack.com/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js">Githack</a> | <a href="https://cdn.statically.io/gh/jaywcjlove/validator.js/master/packages/core/dist/validator.min.js">Statically</a> | <a href="https://bundle.run/validator.tool">bundle.run</a></p>
       <p><a href="https://codesandbox.io/embed/quirky-bohr-m75fx?fontsize=14&#x26;theme=dark"><img src="https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox" alt="Open in CodeSandbox"></a></p>
@@ -75,12 +76,61 @@ validator<span class="token punctuation">.</span><span class="token property-acc
   <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>script</span><span class="token punctuation">></span></span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="<form id=&#x22;form&#x22;>
+  <div>
+    <label for=&#x22;email&#x22;>EMail:</label>
+    <input type=&#x22;email&#x22; name=&#x22;email&#x22; placeholder=&#x22;&#x22; />
+  </div>
+  <div>
+    <label for=&#x22;password&#x22;>Password:</label>
+    <input type=&#x22;password&#x22; name=&#x22;password&#x22; />
+  </div>
+  <div>
+    <label for=&#x22;repassword&#x22;>Confirm Password:</label>
+    <input type=&#x22;repassword&#x22; name=&#x22;repassword&#x22; />
+  </div>
+  <div>
+    <button type=&#x22;submit&#x22;>Submit</button>
+    <button type=&#x22;reset&#x22;>Reset</button>
+  </div>
+</form>
+<script type=&#x22;text/javascript&#x22; src=&#x22;https://unpkg.com/validator.tool/dist/validator.min.js&#x22;></script>
+<script type=&#x22;text/javascript&#x22;>
+var validator = new Validator({
+  form: document.getElementById(&#x27;form&#x27;),
+  rules: {
+    email: {
+      validate: (val) => val ? &#x27;&#x27; : &#x27;Required!&#x27;,
+    },
+    password: {
+      // validate: (val) => val < 5 || val > 15 ? &#x27;字数大于5，小于15&#x27; : &#x27;&#x27;
+    },
+    repassword: {
+      validate: (val) => !val ? &#x27;Required!&#x27; : &#x27;&#x27;,
+    },
+  }
+});
+
+validator.form.onsubmit = (evn) => {
+  evn.preventDefault();
+  const values = validator.getValues();
+  console.log(values);
+}
+
+validator.form.onreset = (evn) => {
+  const data = validator.reset();
+  console.log(data);
+}
+</script>
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h2 id="install"><a class="anchor" aria-hidden="true" tabindex="-1" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
       <pre class="language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> validator.tool --save
 <span class="token comment"># Or</span>
 $ <span class="token function">npm</span> <span class="token function">install</span> @validator.tool/hook --save
-</code></pre>
+</code><div onclick="copied(this)" data-code="$ npm install validator.tool --save
+# Or
+$ npm install @validator.tool/hook --save
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h2 id="usage"><a class="anchor" aria-hidden="true" tabindex="-1" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
       <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useRef <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">Validator</span></span> <span class="token keyword module">from</span> <span class="token string">'validator.tool'</span><span class="token punctuation">;</span>
@@ -110,7 +160,35 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>form</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import { useState, useRef } from &#x27;react&#x27;;
+import Validator from &#x27;validator.tool&#x27;;
+
+function Example() {
+  const [data, setData] = useState({
+    email: &#x27;kennyiseeyou@gmail.com&#x27;
+  });
+  const validator = useRef(
+    new Validator({
+      initValues: { ...data },
+    })
+  );
+  return (
+    <form>
+      <div>
+        <label htmlFor=&#x22;email&#x22;>EMail:</label>
+        <input type=&#x22;email&#x22; name=&#x22;email&#x22; defaultValue={data.email} />
+        <span>
+          {validator.current.message(&#x27;email&#x27;, data.email, {
+            validate: (val) => !/^[A-Z0-9.!#$%&#x26;&#x27;*+-/=?^_&#x60;{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? &#x60;The ${val} must be a valid email address.&#x60; : &#x27;&#x27;
+          })}
+        </span>
+      </div>
+      <button type=&#x22;submit&#x22;>Submit</button>
+      <button type=&#x22;reset&#x22;>Reset</button>
+    </form>
+  );
+}
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useValidator <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'@validator.tool/hook'</span><span class="token punctuation">;</span>
 
@@ -137,7 +215,33 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>form</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import { useState } from &#x27;react&#x27;;
+import { useValidator } from &#x27;@validator.tool/hook&#x27;;
+
+function Example() {
+  const [data, setData] = useState({
+    email: &#x27;kennyiseeyou@gmail.com&#x27;
+  });
+  const validator = useValidator({
+    initValues: { ...data },
+  });
+  return (
+    <form onSubmit={...} onReset={...} onChange={...} onBlur={...}>
+      <div>
+        <label htmlFor=&#x22;email&#x22;>EMail:</label>
+        <input type=&#x22;email&#x22; name=&#x22;email&#x22; defaultValue={data.email} />
+        <span>
+          {validator.message(&#x27;email&#x27;, data.email, {
+            validate: (val) => !/^[A-Z0-9.!#$%&#x26;&#x27;*+-/=?^_&#x60;{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? &#x60;The ${val} must be a valid email address.&#x60; : &#x27;&#x27;
+          })}
+        </span>
+      </div>
+      <button type=&#x22;submit&#x22;>Submit</button>
+      <button type=&#x22;reset&#x22;>Reset</button>
+    </form>
+  );
+}
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h3 id="used-in-the-react-app"><a class="anchor" aria-hidden="true" tabindex="-1" href="#used-in-the-react-app"><span class="octicon octicon-link"></span></a>Used in the React App</h3>
       <p><a href="https://codesandbox.io/embed/used-in-the-react-app-andras-dbzbz-forked-7li45?fontsize=14&#x26;hidenavigation=1&#x26;theme=dark"><img src="https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox" alt="Open in CodeSandbox"></a></p>
       <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
@@ -199,7 +303,66 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>form</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import { useRef, useState } from &#x27;react&#x27;;
+import { useValidator } from &#x27;@validator.tool/hook&#x27;;
+
+function Demo() {
+  const [data, setData] = useState({
+    email: &#x27;kennyiseeyou@gmail.com&#x27;
+  });
+  const { validator, handleReset, handleSubmit } = useValidator({
+    initValues: data,
+    validate: (value, values, field) => {
+      if (field === &#x27;password&#x27; &#x26;&#x26; !value) {
+        return &#x27;Required!&#x27;;
+      }
+    }
+  });
+
+  const onSubmit = (value: Values) => {
+    console.log(&#x27;value&#x27;, value)
+  }
+  const onReset = (value: Values) => {
+    setData({ ...value });
+  }
+
+  function handleChange(env) {
+    const target = env.target;
+    const value = target.type === &#x22;checkbox&#x22; ? target.checked : target.value;
+    const name = target.name;
+    setData({ ...data, [name]: value });
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      onReset={handleReset(onReset)}
+      onChange={handleChange}
+      onBlur={handleChange}
+      // onInput={handleChange}
+    >
+      <div>
+        <label htmlFor=&#x22;email&#x22;>EMail:</label>
+        <input type=&#x22;email&#x22; name=&#x22;email&#x22; defaultValue={data.email} />
+        <span>
+          {validator.message(&#x27;email&#x27;, data.email, {
+            validate: (val) => !/^[A-Z0-9.!#$%&#x26;&#x27;*+-/=?^_&#x60;{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(val) ? &#x60;The ${val} must be a valid email address.&#x60; : &#x27;&#x27;
+          })}
+        </span>
+      </div>
+      <div>
+        <label htmlFor=&#x22;password&#x22;>Password:</label>
+        <input type=&#x22;password&#x22; name=&#x22;password&#x22; />
+        <span>{validator.message(&#x27;password&#x27;, data.password)}</span>
+      </div>
+      <div>
+        <button type=&#x22;submit&#x22;>Submit</button>
+        <button type=&#x22;reset&#x22;>Reset</button>
+      </div>
+    </form>
+  );
+}
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h3 id="support-react-hook"><a class="anchor" aria-hidden="true" tabindex="-1" href="#support-react-hook"><span class="octicon octicon-link"></span></a><a href="https://github.com/jaywcjlove/validator.js/tree/master/packages/hook/README.md">Support React Hook</a></h3>
       <p>
         <a href="https://bundlephobia.com/package/@validator.tool/hook"><img src="https://img.shields.io/bundlephobia/minzip/@validator.tool/hook" alt="npm bundle size"></a>
@@ -209,7 +372,10 @@ $ <span class="token function">npm</span> <span class="token function">install</
       <pre class="language-jsx"><code class="language-jsx"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useValidator <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'@validator.tool/hook'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token punctuation">{</span> validator<span class="token punctuation">,</span> forceUpdate <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useValidator</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import { useValidator } from &#x27;@validator.tool/hook&#x27;;
+
+const { validator, forceUpdate } = useValidator({});
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h3 id="used-in-the-react-native-app"><a class="anchor" aria-hidden="true" tabindex="-1" href="#used-in-the-react-native-app"><span class="octicon octicon-link"></span></a>Used in the React Native App</h3>
       <p>You need to wrap validator with <code>&#x3C;Text></code> Element.</p>
       <p><a href="https://snack.expo.dev/@jaywcjlove/validatorjs-test"><img src="https://img.shields.io/badge/style-Expo-green?label=Open%20In&#x26;logo=expo&#x26;style=flat&#x26;color=#333" alt=""></a></p>
@@ -244,7 +410,38 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span><span class="token class-name">View</span></span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import React, { useRef } from &#x27;react&#x27;;
+import { Text, View, Button } from &#x27;react-native&#x27;;
+import { useValidator } from &#x27;@validator.tool/hook&#x27;;
+
+const WelcomeScreen = () => {
+  const [text, onChangeText] = React.useState(&#x27;Useless Text&#x27;);
+  const { validator, forceUpdate } = useValidator({
+    initValues: { text },
+    validate: (value = &#x27;&#x27;, values, field) => {
+      if (field === &#x27;username&#x27; &#x26;&#x26; value.length > 3) {
+        return &#x27;!! username > 3&#x27;;
+      }
+    },
+  });
+  return (
+    <View>
+      <TextInput onChangeText={onChangeText} value={text} />
+      <Text>
+        {validator.message(&#x27;username&#x27;, text)}
+      </Text>
+      <Button
+        onPress={() => {
+          validator.showMessages();
+          forceUpdate();
+        }}
+        title=&#x22;Submit&#x22;
+        color=&#x22;#841584&#x22;
+      />
+    </View>
+  );
+};
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h2 id="api"><a class="anchor" aria-hidden="true" tabindex="-1" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
       <pre class="language-ts"><code class="language-ts"><span class="token keyword module">export</span> <span class="token keyword">declare</span> <span class="token keyword">type</span> <span class="token class-name"><span class="token maybe-class-name">Value</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token builtin">number</span> <span class="token operator">|</span> <span class="token maybe-class-name">FormDataEntryValue</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">|</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">boolean</span> <span class="token operator">|</span> <span class="token keyword null nil">null</span> <span class="token operator">|</span> <span class="token maybe-class-name">FormDataEntryValue</span><span class="token punctuation">;</span>
 <span class="token keyword module">export</span> <span class="token keyword">declare</span> <span class="token keyword">type</span> <span class="token class-name"><span class="token maybe-class-name">Values</span></span> <span class="token operator">=</span> <span class="token maybe-class-name">Partial</span><span class="token operator">&#x3C;</span><span class="token maybe-class-name">Record</span><span class="token operator">&#x3C;</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Value</span><span class="token operator">>></span><span class="token punctuation">;</span>
@@ -287,7 +484,48 @@ $ <span class="token function">npm</span> <span class="token function">install</
    */</span>
   <span class="token function">allValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="export declare type Value = (number | FormDataEntryValue)[] | number | boolean | null | FormDataEntryValue;
+export declare type Values = Partial<Record<string, Value>>;
+export declare type Fields = Partial<Record<string, boolean>>;
+export declare type Rules = Partial<Record<string, RulesOption>>;
+export interface RulesOption {
+  /** Validate the form&#x27;s values with function. */
+  validate?(value?: Value, values?: Validator[&#x27;values&#x27;], field?: string): string;
+}
+export declare type ValidatorOption = {
+  messagesShown?: boolean;
+  rules?: Rules;
+  initValues?: Values;
+  form?: HTMLFormElement | null;
+  validate?: RulesOption[&#x27;validate&#x27;];
+};
+export default class Validator {
+  constructor(options?: ValidatorOption);
+  validate?: RulesOption[&#x27;validate&#x27;];
+  form?: HTMLFormElement | null;
+  fields: Fields;
+  rules: Rules;
+  values: Values;
+  initValues?: Values;
+  messagesShown: boolean;
+  errorMessages: Partial<Record<string, string>>;
+  showMessages: () => boolean;
+  hideMessages: () => boolean;
+  getForm: () => HTMLFormElement | null | undefined;
+  setForm: (form: HTMLFormElement) => void;
+  /** How you define validation rules and add messages into the form. */
+  message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
+  setValues: (values?: Values) => void;
+  getValues: () => Values;
+  reset: () => Values;
+  fieldValid: (field: string) => boolean;
+  /**
+   * Returns a boolean if all the fields pass validation or not.
+   * @returns Boolean
+   */
+  allValid(): boolean;
+}
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h2 id="use-with-third-party-packages"><a class="anchor" aria-hidden="true" tabindex="-1" href="#use-with-third-party-packages"><span class="octicon octicon-link"></span></a>Use with third-party packages</h2>
       <h3 id="validatorjs-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#validatorjs-1"><span class="octicon octicon-link"></span></a><a href="https://github.com/validatorjs/validator.js">validator.js</a></h3>
       <p><a href="https://bundlephobia.com/package/validator"><img src="https://img.shields.io/bundlephobia/minzip/validator" alt="npm bundle size"></a></p>
@@ -303,7 +541,18 @@ $ <span class="token function">npm</span> <span class="token function">install</
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+</code><div onclick="copied(this)" data-code="import isEmail from &#x27;validator/es/lib/isEmail&#x27;;
+
+function Demo() {
+  return (
+    <p>
+      {validator.current.message(&#x27;email&#x27;, data.email, {
+        validate: (val) => !isEmail(val) ? &#x60;The ${val} must be a valid email address.&#x60; : &#x27;&#x27;
+      })}
+    </p>
+  );
+}
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
       <h3 id="zod"><a class="anchor" aria-hidden="true" tabindex="-1" href="#zod"><span class="octicon octicon-link"></span></a><a href="https://github.com/vriad/zod">Zod</a></h3>
       <p>TypeScript-first schema validation with static type inference</p>
       <p><a href="https://bundlephobia.com/package/zod"><img src="https://img.shields.io/bundlephobia/minzip/zod" alt="npm bundle size"></a></p>
@@ -314,6 +563,15 @@ $ <span class="token function">npm</span> <span class="token function">install</
       </ul>
       <h2 id="license"><a class="anchor" aria-hidden="true" tabindex="-1" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
       <p>Licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+      <script>function copied(target, str) {
+target.classList.add('active');
+copyTextToClipboard(target.dataset.code, function() {
+setTimeout(() => {
+target.classList.remove('active');
+}, 2000);
+});
+}</script>
+      <script src="https://unpkg.com/@uiw/copy-to-clipboard/dist/copy-to-clipboard.umd.js"></script>
     </div>
   </body>
 </html>
