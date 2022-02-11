@@ -376,6 +376,16 @@ $ npm run test # Development model
 - [chriso/validator.js](https://github.com/chriso/validator.js) String validation
 - [rickharrison/validate.js](https://github.com/rickharrison/validate.js) Lightweight JavaScript form validation library inspired by CodeIgniter.
 
+## Contributors
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/jaywcjlove/validator.js/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/validator.js/CONTRIBUTORS.svg" />
+</a>
+
+Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
+
 ## License
 
 Licensed under the [MIT License](https://opensource.org/licenses/MIT).
