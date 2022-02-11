@@ -29,6 +29,13 @@ jobs:
       - run: markdown-to-html --output coverage/index.html
       - run: cp -rp coverage website/build
 
+      - name: Generate Contributors Images
+        uses: jaywcjlove/github-action-contributors@main
+        with:
+          filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
+          output: website/build/CONTRIBUTORS.svg
+          avatarSize: 42
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -54,9 +61,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create Tag
         id: create_tag
-        uses: jaywcjlove/create-tag-action@v1.2.1
+        uses: jaywcjlove/create-tag-action@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           package-path: ./packages/core/package.json
 
       - name: Generate Changelog
