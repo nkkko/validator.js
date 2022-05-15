@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: CI
 on:
   push:
     branches:
@@ -17,6 +17,7 @@ jobs:
           node-version: 14
 
       - run: npm install
+      - run: npm install --workspaces
       - run: npm run lib:build
       - run: npm run hook:build
 
