@@ -18,7 +18,7 @@ export default function App() {
         <ExampleBase />
         <ExampleForm />
       </div>
-      <div id="document">
+      <div id="document" data-color-mode="light">
         <MarkdownPreview className={styles.warpper} source={DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '')} />
       </div>
     </Fragment>
