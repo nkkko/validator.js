@@ -36,6 +36,12 @@ export default class Validator {
   rules: Rules = {};
   values: Values = {};
   initValues?: Values;
+  set resetInitValue(val: Values) {
+    this.initValues = val;
+    if (this.form) {
+      this.setForm(this.form);
+    }
+  }
   messagesShown: boolean = false;
   errorMessages: Partial<Record<string, string>> = {};
   showMessages = () => this.messagesShown = true;

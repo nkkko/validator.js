@@ -1,8 +1,8 @@
 /**! 
- * validator.tool v2.2.2 
+ * validator.tool v2.2.3 
  * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD. 
  * 
- * Copyright (c) 2021 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove) 
+ * Copyright (c) 2022 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove) 
  * http://jaywcjlove.github.io/validator.js 
  * Licensed under the MIT license 
  */
@@ -145,6 +145,16 @@
                 this.setForm(form);
             }
         }
+        Object.defineProperty(Validator.prototype, "resetInitValue", {
+            set: function (val) {
+                this.initValues = val;
+                if (this.form) {
+                    this.setForm(this.form);
+                }
+            },
+            enumerable: false,
+            configurable: true
+        });
         /**
          * Returns a boolean if all the fields pass validation or not.
          * @returns Boolean

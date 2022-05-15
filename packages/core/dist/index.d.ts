@@ -21,6 +21,7 @@ export default class Validator {
     rules: Rules;
     values: Values;
     initValues?: Values;
+    set resetInitValue(val: Values);
     messagesShown: boolean;
     errorMessages: Partial<Record<string, string>>;
     showMessages: () => boolean;
