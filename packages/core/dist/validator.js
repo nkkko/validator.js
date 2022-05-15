@@ -41,8 +41,8 @@
 
     var Validator = /** @class */ (function () {
         function Validator(options) {
-            var _this = this;
             if (options === void 0) { options = {}; }
+            var _this = this;
             this.fields = {};
             this.rules = {};
             this.values = {};

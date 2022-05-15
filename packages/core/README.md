@@ -349,7 +349,7 @@ To develop, Install dependencies, Get the code:
 $ git https://github.com/jaywcjlove/validator.js.git
 $ cd validator.js     # Into the directory
 $ npm install         # or  yarn install
-$ npm run bootstrap   # Install monorepo dependency
+$ npm install --workspaces  # Install monorepo dependency
 ```
 
 To develop, run the self-reloading build:

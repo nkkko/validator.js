@@ -42,6 +42,7 @@ export default [{
     nodeResolve(),
     typescript({
       tsconfig: './tsconfig.json',
+      exclude: ['node_modules']
     }),
     commonjs(),
   ]
@@ -59,6 +60,7 @@ export default [{
   plugins: [
     typescript({
       tsconfig: './tsconfig.json',
+      exclude: ['node_modules']
     }),
     terser({}),
   ]
