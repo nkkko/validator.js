@@ -54,7 +54,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * validator.tool v2.2.4 
  * Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD. 
  * 
- * Copyright (c) 2022 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove) 
+ * Copyright (c) 2023 kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove) 
  * http://jaywcjlove.github.io/validator.js 
  * Licensed under the MIT license 
  */
