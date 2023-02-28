@@ -127,7 +127,7 @@ function Example() {
   const [data, setData] = useState({
     email: 'kennyiseeyou@gmail.com'
   });
-  const validator = useValidator({
+  const { validator } = useValidator({
     initValues: { ...data },
   });
   return (
