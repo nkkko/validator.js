@@ -1,12 +1,12 @@
-export declare type Value = (number | FormDataEntryValue)[] | number | boolean | null | FormDataEntryValue;
-export declare type Values = Partial<Record<string, Value>>;
-export declare type Fields = Partial<Record<string, boolean>>;
-export declare type Rules = Partial<Record<string, RulesOption>>;
+export type Value = (number | FormDataEntryValue)[] | number | boolean | null | FormDataEntryValue;
+export type Values = Partial<Record<string, Value>>;
+export type Fields = Partial<Record<string, boolean>>;
+export type Rules = Partial<Record<string, RulesOption>>;
 export interface RulesOption {
     /** Validate the form's values with function. */
     validate?(value?: Value, values?: Validator['values'], field?: string): string;
 }
-export declare type ValidatorOption = {
+export type ValidatorOption = {
     messagesShown?: boolean;
     rules?: Rules;
     initValues?: Values;
@@ -29,7 +29,7 @@ export default class Validator {
     getForm: () => HTMLFormElement | null | undefined;
     setForm: (form: HTMLFormElement) => void;
     /** How you define validation rules and add messages into the form. */
-    message: (field: string, inputValue?: Value | undefined, options?: RulesOption | undefined) => string | undefined;
+    message: (field: string, inputValue?: Value, options?: RulesOption) => string | undefined;
     setValues: (values?: Values) => void;
     getValues: () => Values;
     reset: () => Values;

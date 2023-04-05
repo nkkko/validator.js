@@ -17,6 +17,7 @@
       "dom"
     ],
     "noUnusedLocals": true,
+    "skipLibCheck": true,
     "noEmit": false,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -24,11 +25,9 @@
     "downlevelIteration": true,
     "noUnusedParameters": false,
     "resolveJsonModule": true,
-    "skipLibCheck": false,
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "target": "es5"
   },
   "include": ["src"],

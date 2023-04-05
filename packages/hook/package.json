@@ -33,10 +33,10 @@
     "validator.tool": "2.2.4"
   },
   "devDependencies": {
-    "@babel/runtime": "7.16.3",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "@babel/runtime": "^7.21.0",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
