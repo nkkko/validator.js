@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/validator.js/static/css/main.cde6ccd6.css",
-    "main.js": "/validator.js/static/js/main.23c69be0.js",
-    "prismjs-vendor.js": "/validator.js/static/js/prismjs-vendor.432f6c65.js",
+    "main.css": "/validator.js/static/css/main.334e24fd.css",
+    "main.js": "/validator.js/static/js/main.b9b58373.js",
+    "prismjs-vendor.js": "/validator.js/static/js/prismjs-vendor.2f7db6d5.js",
     "vendor.js": "/validator.js/static/js/vendor.cc0f5134.js",
     "index.html": "/validator.js/index.html",
-    "main.cde6ccd6.css.map": "/validator.js/static/css/main.cde6ccd6.css.map",
-    "main.23c69be0.js.map": "/validator.js/static/js/main.23c69be0.js.map",
-    "prismjs-vendor.432f6c65.js.map": "/validator.js/static/js/prismjs-vendor.432f6c65.js.map",
+    "main.334e24fd.css.map": "/validator.js/static/css/main.334e24fd.css.map",
+    "main.b9b58373.js.map": "/validator.js/static/js/main.b9b58373.js.map",
+    "prismjs-vendor.2f7db6d5.js.map": "/validator.js/static/js/prismjs-vendor.2f7db6d5.js.map",
     "vendor.cc0f5134.js.map": "/validator.js/static/js/vendor.cc0f5134.js.map"
   },
   "entrypoints": [
-    "static/js/prismjs-vendor.432f6c65.js",
+    "static/js/prismjs-vendor.2f7db6d5.js",
     "static/js/vendor.cc0f5134.js",
-    "static/css/main.cde6ccd6.css",
-    "static/js/main.23c69be0.js"
+    "static/css/main.334e24fd.css",
+    "static/js/main.b9b58373.js"
   ]
 }
