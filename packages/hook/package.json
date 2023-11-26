@@ -1,6 +1,6 @@
 {
   "name": "@validator.tool/hook",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Hooks for use with `validator.tool`.",
   "homepage": "http://jaywcjlove.github.io/validator.js",
   "funding": "https://jaywcjlove.github.io/#/sponsor",
@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "validator.tool": "2.2.5"
+    "validator.tool": "2.2.6"
   },
   "devDependencies": {
     "@babel/runtime": "^7.21.0",
