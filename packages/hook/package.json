@@ -3,6 +3,7 @@
   "version": "2.2.5",
   "description": "Hooks for use with `validator.tool`.",
   "homepage": "http://jaywcjlove.github.io/validator.js",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "author": "kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",

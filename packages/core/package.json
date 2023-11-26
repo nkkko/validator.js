@@ -3,6 +3,7 @@
   "version": "2.2.5",
   "description": "Lightweight JavaScript form validation, that had minimal configuration and felt natural to use. No dependencies, support UMD.",
   "homepage": "http://jaywcjlove.github.io/validator.js",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "author": "kenny wang <wowohoo@qq.com> (https://github.com/jaywcjlove)",
   "main": "cjs/index.js",
   "module": "esm/index.js",
