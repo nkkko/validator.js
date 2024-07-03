@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/validator.js/static/css/main.e0a4acba.css",
-    "main.js": "/validator.js/static/js/main.4dd12066.js",
-    "prismjs-vendor.js": "/validator.js/static/js/prismjs-vendor.5e32e52f.js",
-    "vendor.js": "/validator.js/static/js/vendor.c261752c.js",
+    "main.css": "/validator.js/static/css/main.5a676749.css",
+    "main.js": "/validator.js/static/js/main.b1811cbb.js",
+    "prismjs-vendor.js": "/validator.js/static/js/prismjs-vendor.eda125b5.js",
+    "vendor.js": "/validator.js/static/js/vendor.a8a0dae9.js",
     "index.html": "/validator.js/index.html",
-    "main.e0a4acba.css.map": "/validator.js/static/css/main.e0a4acba.css.map",
-    "main.4dd12066.js.map": "/validator.js/static/js/main.4dd12066.js.map",
-    "prismjs-vendor.5e32e52f.js.map": "/validator.js/static/js/prismjs-vendor.5e32e52f.js.map",
-    "vendor.c261752c.js.map": "/validator.js/static/js/vendor.c261752c.js.map"
+    "main.5a676749.css.map": "/validator.js/static/css/main.5a676749.css.map",
+    "main.b1811cbb.js.map": "/validator.js/static/js/main.b1811cbb.js.map",
+    "prismjs-vendor.eda125b5.js.map": "/validator.js/static/js/prismjs-vendor.eda125b5.js.map",
+    "vendor.a8a0dae9.js.map": "/validator.js/static/js/vendor.a8a0dae9.js.map"
   },
   "entrypoints": [
-    "static/js/prismjs-vendor.5e32e52f.js",
-    "static/js/vendor.c261752c.js",
-    "static/css/main.e0a4acba.css",
-    "static/js/main.4dd12066.js"
+    "static/js/prismjs-vendor.eda125b5.js",
+    "static/js/vendor.a8a0dae9.js",
+    "static/css/main.5a676749.css",
+    "static/js/main.b1811cbb.js"
   ]
 }
