@@ -221,6 +221,8 @@ function Demo() {
 [![npm version](https://img.shields.io/npm/v/@validator.tool/hook.svg)](https://www.npmjs.com/package/@validator.tool/hook)
 [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/validator-js-support-hook-andras-dbzbz-dbzbz?fontsize=14&hidenavigation=1&theme=dark)
 
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/jaywcjlove/validator.js)
+
 ```jsx
 import { useValidator } from '@validator.tool/hook';
 
